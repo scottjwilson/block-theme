@@ -1,0 +1,210 @@
+/**
+ * Harborlight Hero Block Styles
+ */
+
+$primary-color: #2e7d32;
+$primary-dark: #1b5e20;
+$text-dark: #1a1a1a;
+$text-gray: #666;
+$white: #fff;
+$border-radius: 8px;
+$border-radius-lg: 16px;
+
+.wp-block-myblocks-hero {
+  padding: 4rem 0;
+  background-color: $white;
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: $text-dark;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $text-gray;
+    margin: 0 0 2rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 0.875rem 1.75rem;
+    background-color: $primary-color;
+    color: $white;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: $border-radius;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-color;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: $text-gray;
+  }
+
+  .hero-images {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+  }
+
+  .hero-image {
+    position: absolute;
+    overflow: hidden;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    // Placeholder for editor
+    .image-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+
+  .hero-image-1 {
+    width: 320px;
+    height: 380px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .hero-image-2 {
+    width: 240px;
+    height: 280px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  // Responsive styles
+  @media (max-width: 968px) {
+    padding: 3rem 0;
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-content {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-images {
+      justify-content: center;
+    }
+
+    .image-stack {
+      max-width: 400px;
+      height: 350px;
+    }
+
+    .hero-image-1 {
+      width: 260px;
+      height: 300px;
+    }
+
+    .hero-image-2 {
+      width: 200px;
+      height: 220px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-stats {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .stat-item {
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-stack {
+      max-width: 300px;
+      height: 280px;
+    }
+
+    .hero-image-1 {
+      width: 200px;
+      height: 240px;
+    }
+
+    .hero-image-2 {
+      width: 160px;
+      height: 180px;
+    }
+  }
+}
