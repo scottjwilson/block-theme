@@ -1,14 +1,74 @@
 /*!************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/myheader/style.scss ***!
   \************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-myblocks-myheader {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--wp--preset--color--canvas);
+  border-bottom: 1px solid var(--wp--preset--color--mist-light);
+}
+
+.header__inner {
+  max-width: var(--wp--custom--container);
+  margin: 0 auto;
+  padding: 0 var(--wp--preset--spacing--40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 24px;
+}
+
+.header__logo {
+  font-family: var(--wp--preset--font-family--system);
+  font-size: var(--wp--preset--font-size--medium);
+  font-weight: 700;
+  color: var(--wp--preset--color--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header__logo:hover {
+  color: var(--wp--preset--color--harbor);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--ink);
+  text-decoration: none;
+  transition: color var(--wp--custom--transition--fast);
+  position: relative;
+}
+
+.header__nav-link:hover,
+.header__nav-link--active {
+  color: var(--wp--preset--color--harbor);
+}
+
+.header__nav-link--active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: var(--wp--preset--color--harbor);
+  border-radius: 1px;
 }
