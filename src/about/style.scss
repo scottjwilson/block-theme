@@ -1,0 +1,212 @@
+/**
+ * About Block Styles
+ */
+
+.wp-block-myblocks-about {
+  padding: var(--wp--preset--spacing--80) 0;
+  background-color: var(--wp--preset--color--canvas);
+
+  .about-container {
+    max-width: var(--wp--custom--container);
+    margin: 0 auto;
+    padding: 0 var(--wp--preset--spacing--40);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--wp--preset--spacing--70);
+    align-items: start;
+  }
+
+  // Image collage layout - 2 columns, left column has 2 stacked images, right has 1 tall image
+  .about-images {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--wp--preset--spacing--30);
+  }
+
+  .about-image {
+    overflow: hidden;
+    border-radius: var(--wp--custom--border-radius--medium);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      background: var(--wp--preset--gradient--primary-gradient);
+      color: var(--wp--preset--color--primary);
+      font-weight: 500;
+      font-size: var(--wp--preset--font-size--small);
+    }
+  }
+
+  // Top-left small image
+  .about-image-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  // Bottom-left small image
+  .about-image-3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  // Large right image spanning both rows
+  .about-image-2 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    .image-placeholder {
+      min-height: 100%;
+    }
+  }
+
+  // Content section
+  .about-content {
+    padding-top: var(--wp--preset--spacing--20);
+  }
+
+  .about-label {
+    display: block;
+    font-size: var(--wp--preset--font-size--medium);
+    color: var(--wp--preset--color--primary);
+    margin-bottom: var(--wp--preset--spacing--20);
+    font-weight: 400;
+  }
+
+  .about-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--wp--preset--color--ink);
+    margin: 0 0 var(--wp--preset--spacing--40);
+    letter-spacing: -0.02em;
+  }
+
+  .about-description {
+    font-size: var(--wp--preset--font-size--medium);
+    line-height: 1.8;
+    color: var(--wp--preset--color--mist);
+    margin: 0 0 var(--wp--preset--spacing--50);
+  }
+
+  // Mission/Vision cards with green left border
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--wp--preset--spacing--40);
+    margin-bottom: var(--wp--preset--spacing--50);
+  }
+
+  .about-card {
+    padding-left: var(--wp--preset--spacing--30);
+    border-left: 3px solid var(--wp--preset--color--primary);
+  }
+
+  .about-card-icon {
+    margin-bottom: var(--wp--preset--spacing--20);
+    color: var(--wp--preset--color--primary);
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .about-card-title {
+    font-size: var(--wp--preset--font-size--large);
+    font-weight: 700;
+    color: var(--wp--preset--color--ink);
+    margin: 0 0 var(--wp--preset--spacing--20);
+  }
+
+  .about-card-text {
+    font-size: var(--wp--preset--font-size--small);
+    line-height: 1.6;
+    color: var(--wp--preset--color--mist);
+    margin: 0;
+  }
+
+  // CTA Button
+  .about-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--20);
+    padding: 0.875rem 1.75rem;
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--canvas);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: var(--wp--custom--border-radius--medium);
+    transition: background-color var(--wp--custom--transition--fast);
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      background-color: var(--wp--preset--color--primary-dark);
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 968px) {
+    padding: var(--wp--preset--spacing--60) 0;
+
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: var(--wp--preset--spacing--50);
+    }
+
+    .about-images {
+      max-width: 500px;
+    }
+
+    .about-content {
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about-images {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .about-image-2 {
+      grid-column: 1 / 3;
+      grid-row: 1;
+
+      .image-placeholder {
+        min-height: 200px;
+      }
+    }
+
+    .about-image-1 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .about-image-3 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .about-cards {
+      grid-template-columns: 1fr;
+      gap: var(--wp--preset--spacing--30);
+    }
+  }
+}

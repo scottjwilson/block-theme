@@ -1,0 +1,14 @@
+/**
+ * About Block Editor Styles
+ */
+
+.wp-block-myblocks-about {
+  .image-placeholder {
+    min-height: 180px;
+  }
+
+  .about-image-2 .image-placeholder {
+    min-height: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/about",
+  "version": "0.1.0",
+  "title": "About",
+  "category": "widgets",
+  "icon": "groups",
+  "description": "About section with image collage and mission/vision cards.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "about",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
