@@ -7,50 +7,70 @@
       "palette": [
         {
           "slug": "primary",
-          "color": "#2e7d32",
+          "color": "#E85A3C",
           "name": "Primary"
         },
         {
           "slug": "primary-dark",
-          "color": "#1b5e20",
+          "color": "#D14A2D",
           "name": "Primary Dark"
         },
         {
           "slug": "primary-light",
-          "color": "#e8f5e9",
+          "color": "#FDF8F3",
           "name": "Primary Light"
         },
         {
+          "slug": "secondary",
+          "color": "#1E3D59",
+          "name": "Secondary"
+        },
+        {
+          "slug": "accent",
+          "color": "#2E8B7B",
+          "name": "Accent"
+        },
+        {
           "slug": "harbor",
-          "color": "#21759b",
+          "color": "#1E3D59",
           "name": "Harbor"
         },
         {
           "slug": "ink",
-          "color": "#1a1a1a",
+          "color": "#1A2E3F",
           "name": "Ink"
         },
         {
           "slug": "mist",
-          "color": "#666666",
+          "color": "#5A6D7A",
           "name": "Mist"
         },
         {
           "slug": "mist-light",
-          "color": "#e0e0e0",
+          "color": "#F5F5F5",
           "name": "Mist Light"
         },
         {
           "slug": "canvas",
           "color": "#ffffff",
           "name": "Canvas"
+        },
+        {
+          "slug": "cream",
+          "color": "#FDF8F3",
+          "name": "Cream"
         }
       ],
       "gradients": [
         {
           "slug": "primary-gradient",
-          "gradient": "linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
+          "gradient": "linear-gradient(135deg, #FDF8F3 0%, #F8EDE3 100%)",
           "name": "Primary Gradient"
+        },
+        {
+          "slug": "hero-gradient",
+          "gradient": "linear-gradient(135deg, #1E3D59 0%, #2E8B7B 100%)",
+          "name": "Hero Gradient"
         }
       ]
     },

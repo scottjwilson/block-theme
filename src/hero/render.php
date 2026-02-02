@@ -1,45 +1,28 @@
 <?php
 /**
- * Hero block render template for Harborlight Foundation
+ * Hero block render template
  *
  * @var array $attributes The block attributes.
  * @var string $content The block default content.
  * @var WP_Block $block The block instance.
  */
+
+$background_image = get_theme_file_uri('assets/images/hero-bg.jpg');
 ?>
-<section <?php echo get_block_wrapper_attributes(['class' => 'harborlight-hero']); ?>>
-	<div class="hero-container">
-		<div class="hero-content">
-			<h1 class="hero-title">Together, We Can Make a Difference</h1>
-			<p class="hero-description">
-				Together, We Create A Better Future For All. Join Hands With Us To Make A Positive Impact. Our Mission Is To Create Positive Change By Providing Essential Resources, Education, And Support To Underserved Communities.
+<section <?php echo get_block_wrapper_attributes(['class' => 'hero']); ?>>
+	<div class="hero__background" style="background-image: url('<?php echo esc_url($background_image); ?>');">
+		<div class="hero__overlay"></div>
+	</div>
+	<div class="hero__container">
+		<div class="hero__content">
+			<span class="hero__label">Donate to Contribute</span>
+			<h1 class="hero__title">Let's build the better world together</h1>
+			<p class="hero__description">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, ipsum dolor sit pulvinar dapibus leo ipsum dolor sit.
 			</p>
-			<a href="#get-involved" class="hero-cta">Get Involved</a>
-
-			<div class="hero-stats">
-				<div class="stat-item">
-					<span class="stat-number">150+</span>
-					<span class="stat-label">Lives Impacted</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">200+</span>
-					<span class="stat-label">Communities Served</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">20+</span>
-					<span class="stat-label">Years of Impact</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="hero-images">
-			<div class="image-stack">
-				<div class="hero-image hero-image-1">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/1.png')); ?>" alt="Children learning together" />
-				</div>
-				<div class="hero-image hero-image-2">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/2.png')); ?>" alt="Community outreach" />
-				</div>
+			<div class="hero__buttons">
+				<a href="/donate" class="hero__btn hero__btn--primary">Donate Fund</a>
+				<a href="/about" class="hero__btn hero__btn--outline">Learn More</a>
 			</div>
 		</div>
 	</div>
