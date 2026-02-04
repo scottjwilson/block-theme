@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * Register pattern categories
+ */
+function harborlight_register_pattern_categories() {
+	register_block_pattern_category( 'harborlight', array(
+		'label' => __( 'Harbor Light', 'harborlight' )
+	));
+}
+add_action( 'init', 'harborlight_register_pattern_categories' );
+
 function myblocks_myheader_block_init() {
 	if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
 		wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );

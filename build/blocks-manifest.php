@@ -29,13 +29,55 @@ return array(
 		'version' => '0.1.0',
 		'title' => 'Hero',
 		'category' => 'widgets',
-		'icon' => 'smiley',
-		'description' => 'Example block scaffolded with Create Block tool.',
+		'icon' => 'superhero-alt',
+		'description' => 'Harbor Light hero section with editable content.',
 		'example' => array(
 			
 		),
 		'supports' => array(
 			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Seattle, Washington · Est. 2016'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Guiding paths from'
+			),
+			'titleHighlight' => array(
+				'type' => 'string',
+				'default' => 'shelter to stability'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Harbor Light bridges the gap between homelessness and lasting stability through education, job training, and compassionate housing support. Because everyone deserves to find their way home.'
+			),
+			'primaryButtonText' => array(
+				'type' => 'string',
+				'default' => 'Explore Our Programs'
+			),
+			'primaryButtonUrl' => array(
+				'type' => 'string',
+				'default' => '#programs'
+			),
+			'secondaryButtonText' => array(
+				'type' => 'string',
+				'default' => 'See Our Impact'
+			),
+			'secondaryButtonUrl' => array(
+				'type' => 'string',
+				'default' => '#impact'
+			),
+			'statNumber' => array(
+				'type' => 'string',
+				'default' => '3,247'
+			),
+			'statLabel' => array(
+				'type' => 'string',
+				'default' => 'Lives changed in 2025'
+			)
 		),
 		'textdomain' => 'hero',
 		'editorScript' => 'file:./index.js',

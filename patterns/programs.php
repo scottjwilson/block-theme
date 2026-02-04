@@ -2,15 +2,15 @@
 /**
  * Title: Programs Section
  * Slug: block-theme/programs
- * Categories: featured
+ * Categories: harborlight, featured
  * Description: Four pillars of support - program cards grid with featured card.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"},"className":"programs-section"} -->
-<div class="wp-block-group programs-section has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"},"className":"programs-section"} -->
+<div class="wp-block-group programs-section has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--4xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--4xl);padding-left:var(--wp--preset--spacing--xl)">
 
-    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--2xl)">
         <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.2em","fontWeight":"600","fontSize":"clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)"}},"textColor":"amber-dark"} -->
         <p class="has-amber-dark-color has-text-color" style="font-size:clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);font-weight:600;letter-spacing:0.2em;text-transform:uppercase">What We Do</p>
         <!-- /wp:paragraph -->
@@ -42,8 +42,8 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
-            <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+            <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--lg)">
 
                 <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem)"}},"textColor":"navy"} -->
                 <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem)">Beacon Academy</h3>
@@ -57,8 +57,8 @@
                 <p class="has-charcoal-light-color has-text-color">GED preparation, financial literacy, digital skills, and English language classes designed for adult learners rebuilding their lives. Flexible scheduling accommodates work and family responsibilities.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:list {"className":"program-highlights","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
-                <ul class="program-highlights" style="margin-bottom:var(--wp--preset--spacing--40)">
+                <!-- wp:list {"className":"program-highlights","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|lg"}}}} -->
+                <ul class="program-highlights" style="margin-bottom:var(--wp--preset--spacing--lg)">
                     <!-- wp:list-item {"style":{"typography":{"fontSize":"0.9375rem"}},"textColor":"charcoal-light"} -->
                     <li class="has-charcoal-light-color has-text-color" style="font-size:0.9375rem">Free GED test preparation</li>
                     <!-- /wp:list-item -->
@@ -81,8 +81,8 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--lg)">
 
             <!-- wp:html -->
             <span class="program-number" style="position:absolute;top:1.5rem;right:1.5rem;font-family:'DM Serif Display', Georgia, serif;font-size:clamp(2rem, 1.5rem + 2.5vw, 3rem);color:#e8e0d4;line-height:1;">02</span>
@@ -116,8 +116,8 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--lg)">
 
             <!-- wp:html -->
             <span class="program-number" style="position:absolute;top:1.5rem;right:1.5rem;font-family:'DM Serif Display', Georgia, serif;font-size:clamp(2rem, 1.5rem + 2.5vw, 3rem);color:#e8e0d4;line-height:1;">03</span>
@@ -155,8 +155,8 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+        <!-- wp:group {"className":"program-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}},"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group program-card has-white-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--lg)">
 
             <!-- wp:html -->
             <span class="program-number" style="position:absolute;top:1.5rem;right:1.5rem;font-family:'DM Serif Display', Georgia, serif;font-size:clamp(2rem, 1.5rem + 2.5vw, 3rem);color:#e8e0d4;line-height:1;">04</span>

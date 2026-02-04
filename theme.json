@@ -167,41 +167,50 @@
     },
     "spacing": {
       "units": ["px", "rem", "%", "vw", "vh"],
+      "customSpacingSize": true,
+      "spacingScale": {
+        "steps": 0
+      },
       "spacingSizes": [
         {
-          "slug": "10",
+          "slug": "xs",
           "size": "0.5rem",
           "name": "XS"
         },
         {
-          "slug": "20",
+          "slug": "sm",
           "size": "1rem",
           "name": "SM"
         },
         {
-          "slug": "30",
+          "slug": "md",
           "size": "1.5rem",
           "name": "MD"
         },
         {
-          "slug": "40",
+          "slug": "lg",
           "size": "2rem",
           "name": "LG"
         },
         {
-          "slug": "50",
+          "slug": "xl",
           "size": "3rem",
           "name": "XL"
         },
         {
-          "slug": "60",
+          "slug": "2xl",
           "size": "5rem",
           "name": "2XL"
         },
         {
-          "slug": "70",
+          "slug": "3xl",
           "size": "8rem",
           "name": "3XL"
+        },
+        {
+          "slug": "4xl",
+          "size": "10rem",
+          "name": "4XL"
         }
       ]
     },
@@ -246,7 +255,7 @@
       "lineHeight": "1.7"
     },
     "spacing": {
-      "blockGap": "var(--wp--preset--spacing--40)"
+      "blockGap": "var(--wp--preset--spacing--lg)"
     },
     "elements": {
       "link": {

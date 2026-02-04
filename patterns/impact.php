@@ -2,14 +2,14 @@
 /**
  * Title: Impact Section
  * Slug: block-theme/impact
- * Categories: featured
+ * Categories: harborlight, featured
  * Description: Real outcomes with metrics and progress bars.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"cream-dark","layout":{"type":"constrained","contentSize":"1400px"}} -->
-<div class="wp-block-group has-cream-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"cream-dark","layout":{"type":"constrained","contentSize":"1400px"}} -->
+<div class="wp-block-group has-cream-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--4xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--4xl);padding-left:var(--wp--preset--spacing--xl)">
 
-    <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|60"}}}} -->
+    <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|2xl"}}}} -->
     <div class="wp-block-columns">
 
         <!-- wp:column -->
@@ -22,11 +22,11 @@
             <h2 class="wp-block-heading has-navy-color has-text-color" style="font-size:clamp(2rem, 1.5rem + 2.5vw, 3rem)">Real outcomes,<br><em style="color:#4a7c8c;">measured with care</em></h2>
             <!-- /wp:heading -->
 
-            <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.125rem, 1rem + 0.5vw, 1.25rem)"},"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"textColor":"charcoal-light"} -->
-            <p class="has-charcoal-light-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--50);font-size:clamp(1.125rem, 1rem + 0.5vw, 1.25rem)">We track what matters: not just beds filled, but lives rebuilt. Our outcomes-focused approach means every program is designed with long-term stability as the goal.</p>
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1.125rem, 1rem + 0.5vw, 1.25rem)"},"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}},"textColor":"charcoal-light"} -->
+            <p class="has-charcoal-light-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--xl);font-size:clamp(1.125rem, 1rem + 0.5vw, 1.25rem)">We track what matters: not just beds filled, but lives rebuilt. Our outcomes-focused approach means every program is designed with long-term stability as the goal.</p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group">
 
                 <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -92,8 +92,8 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-            <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
+            <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xl"}}}} -->
+            <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--xl)">
                 <!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"4px","width":"1.5px"},"color":{"text":"#1a2744"}}} -->
                 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" style="border-radius:4px;border-width:1.5px;color:#1a2744">View Annual Report →</a></div>
                 <!-- /wp:button -->
@@ -104,8 +104,8 @@
 
         <!-- wp:column -->
         <div class="wp-block-column">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-            <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--lg);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--lg);padding-left:var(--wp--preset--spacing--lg)">
                 <!-- wp:html -->
                 <div style="position:relative;padding:2rem;">
                     <div style="aspect-ratio:4/3;background:linear-gradient(135deg, #e8e0d4 0%, #f0ebe3 100%);border:2px dashed #9a918a;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;color:#9a918a;font-size:0.9375rem;font-style:italic;box-shadow:0 12px 40px rgba(26, 39, 68, 0.12);">

@@ -2,15 +2,15 @@
 /**
  * Title: Stories Section
  * Slug: block-theme/stories
- * Categories: featured
+ * Categories: harborlight, featured
  * Description: The faces behind our mission - story cards.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"}} -->
-<div class="wp-block-group has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"}} -->
+<div class="wp-block-group has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--4xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--4xl);padding-left:var(--wp--preset--spacing--xl)">
 
-    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--2xl)">
         <!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.2em","fontWeight":"600","fontSize":"clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)"}},"textColor":"amber-dark"} -->
         <p class="has-text-align-center has-amber-dark-color has-text-color" style="font-size:clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);font-weight:600;letter-spacing:0.2em;text-transform:uppercase">Stories of Change</p>
         <!-- /wp:paragraph -->
@@ -21,7 +21,7 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
+    <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|lg"}}}} -->
     <div class="wp-block-columns">
 
         <!-- wp:column {"width":"60%"} -->
@@ -41,8 +41,8 @@
                     <!-- /wp:column -->
                     <!-- wp:column -->
                     <div class="wp-block-column">
-                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-                        <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+                        <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--lg);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--lg);padding-left:var(--wp--preset--spacing--lg)">
                             <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.15em","fontWeight":"600","fontSize":"clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)"}},"textColor":"amber-dark"} -->
                             <p class="has-amber-dark-color has-text-color" style="font-size:clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);font-weight:600;letter-spacing:0.15em;text-transform:uppercase">Graduate Spotlight</p>
                             <!-- /wp:paragraph -->
@@ -71,7 +71,7 @@
 
         <!-- wp:column {"width":"40%"} -->
         <div class="wp-block-column" style="flex-basis:40%">
-            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"flex","orientation":"vertical"}} -->
             <div class="wp-block-group">
 
                 <!-- wp:group {"style":{"border":{"radius":"12px"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
@@ -81,8 +81,8 @@
                         <span>Portrait: The Rivera family</span>
                     </div>
                     <!-- /wp:html -->
-                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|md","bottom":"var:preset|spacing|md","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--md);padding-right:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--md);padding-left:var(--wp--preset--spacing--md)">
                         <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.15em","fontWeight":"600","fontSize":"clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)"}},"textColor":"amber-dark"} -->
                         <p class="has-amber-dark-color has-text-color" style="font-size:clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);font-weight:600;letter-spacing:0.15em;text-transform:uppercase">Family Story</p>
                         <!-- /wp:paragraph -->
@@ -106,8 +106,8 @@
                         <span>Portrait: Volunteer James Chen</span>
                     </div>
                     <!-- /wp:html -->
-                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|md","bottom":"var:preset|spacing|md","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--md);padding-right:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--md);padding-left:var(--wp--preset--spacing--md)">
                         <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.15em","fontWeight":"600","fontSize":"clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)"}},"textColor":"amber-dark"} -->
                         <p class="has-amber-dark-color has-text-color" style="font-size:clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);font-weight:600;letter-spacing:0.15em;text-transform:uppercase">Volunteer Voice</p>
                         <!-- /wp:paragraph -->
@@ -132,8 +132,8 @@
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-    <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|xl"}}}} -->
+    <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--xl)">
         <!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"4px","width":"0px"},"color":{"text":"#1a2744"}}} -->
         <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" style="border-radius:4px;border-width:0px;color:#1a2744">View All Stories</a></div>
         <!-- /wp:button -->

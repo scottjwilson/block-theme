@@ -2,15 +2,15 @@
 /**
  * Title: Features Section
  * Slug: block-theme/features
- * Categories: featured
+ * Categories: harborlight, featured
  * Description: A section with three feature cards - volunteer, donate, and partner.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"mist-light","layout":{"type":"constrained","contentSize":"1120px"}} -->
-<div class="wp-block-group has-mist-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl","left":"var:preset|spacing|lg","right":"var:preset|spacing|lg"}}},"backgroundColor":"mist-light","layout":{"type":"constrained","contentSize":"1120px"}} -->
+<div class="wp-block-group has-mist-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-right:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--3xl);padding-left:var(--wp--preset--spacing--lg)">
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
+	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--xl)">
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em","fontStyle":"normal","fontWeight":"600","fontSize":"0.75rem"}},"textColor":"primary"} -->
 		<p class="has-text-align-center has-primary-color has-text-color" style="font-size:0.75rem;font-style:normal;font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Get Involved Now</p>
 		<!-- /wp:paragraph -->
@@ -21,13 +21,13 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|md"}}}} -->
 	<div class="wp-block-columns">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"12px"},"dimensions":{"minHeight":"100%"}},"backgroundColor":"harbor","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-			<div class="wp-block-group has-harbor-background-color has-background" style="border-radius:12px;min-height:100%;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}},"border":{"radius":"12px"},"dimensions":{"minHeight":"100%"}},"backgroundColor":"harbor","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+			<div class="wp-block-group has-harbor-background-color has-background" style="border-radius:12px;min-height:100%;padding-top:var(--wp--preset--spacing--lg);padding-right:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--lg);padding-left:var(--wp--preset--spacing--md)">
 
 				<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 				<div class="wp-block-group">
@@ -41,8 +41,8 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|30"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
-				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--30);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|md"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
+				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--sm);margin-bottom:var(--wp--preset--spacing--md);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons -->
@@ -60,8 +60,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"12px"},"dimensions":{"minHeight":"100%"}},"backgroundColor":"primary","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-			<div class="wp-block-group has-primary-background-color has-background" style="border-radius:12px;min-height:100%;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}},"border":{"radius":"12px"},"dimensions":{"minHeight":"100%"}},"backgroundColor":"primary","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+			<div class="wp-block-group has-primary-background-color has-background" style="border-radius:12px;min-height:100%;padding-top:var(--wp--preset--spacing--lg);padding-right:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--lg);padding-left:var(--wp--preset--spacing--md)">
 
 				<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 				<div class="wp-block-group">
@@ -75,8 +75,8 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|30"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
-				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--30);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|md"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
+				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--sm);margin-bottom:var(--wp--preset--spacing--md);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons -->
@@ -94,8 +94,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:cover {"dimRatio":60,"overlayColor":"harbor","minHeight":100,"minHeightUnit":"%","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}}} -->
-			<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30);min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-harbor-background-color has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container">
+			<!-- wp:cover {"dimRatio":60,"overlayColor":"harbor","minHeight":100,"minHeightUnit":"%","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}}}} -->
+			<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--lg);padding-right:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--lg);padding-left:var(--wp--preset--spacing--md);min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-harbor-background-color has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container">
 
 				<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 				<div class="wp-block-group">
@@ -109,8 +109,8 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|30"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
-				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--30);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|md"}},"typography":{"fontSize":"0.875rem","lineHeight":"1.6"}},"textColor":"canvas"} -->
+				<p class="has-canvas-color has-text-color" style="margin-top:var(--wp--preset--spacing--sm);margin-bottom:var(--wp--preset--spacing--md);font-size:0.875rem;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:buttons -->
