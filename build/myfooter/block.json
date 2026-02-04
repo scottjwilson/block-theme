@@ -3,13 +3,130 @@
   "apiVersion": 3,
   "name": "myblocks/myfooter",
   "version": "0.1.0",
-  "title": "My Footer",
+  "title": "Footer",
   "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "icon": "admin-home",
+  "description": "Harbor Light footer with contact info, navigation, and newsletter.",
   "example": {},
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "logoText": {
+      "type": "string",
+      "default": "Harbor Light"
+    },
+    "tagline": {
+      "type": "string",
+      "default": "Guiding paths from shelter to stability"
+    },
+    "address": {
+      "type": "string",
+      "default": "1847 Harbor Avenue\nSeattle, WA 98126"
+    },
+    "phone": {
+      "type": "string",
+      "default": "(206) 555-1234"
+    },
+    "email": {
+      "type": "string",
+      "default": "info@harborlight.org"
+    },
+    "programsLinks": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Beacon Academy",
+          "url": "#"
+        },
+        {
+          "label": "Anchor Housing",
+          "url": "#"
+        },
+        {
+          "label": "Compass Careers",
+          "url": "#"
+        },
+        {
+          "label": "Youth Lantern",
+          "url": "#"
+        }
+      ]
+    },
+    "involvedLinks": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Donate",
+          "url": "#"
+        },
+        {
+          "label": "Volunteer",
+          "url": "#"
+        },
+        {
+          "label": "Corporate Partners",
+          "url": "#"
+        },
+        {
+          "label": "Events",
+          "url": "#"
+        }
+      ]
+    },
+    "aboutLinks": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Our Story",
+          "url": "#"
+        },
+        {
+          "label": "Team",
+          "url": "#"
+        },
+        {
+          "label": "Financials",
+          "url": "#"
+        },
+        {
+          "label": "Careers",
+          "url": "#"
+        },
+        {
+          "label": "Press",
+          "url": "#"
+        }
+      ]
+    },
+    "newsletterTitle": {
+      "type": "string",
+      "default": "Stay in the light"
+    },
+    "newsletterDescription": {
+      "type": "string",
+      "default": "Monthly stories, impact updates, and ways to help."
+    },
+    "facebookUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "instagramUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkedinUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "twitterUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "ein": {
+      "type": "string",
+      "default": "91-1234567"
+    }
   },
   "textdomain": "myfooter",
   "editorScript": "file:./index.js",

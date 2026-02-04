@@ -1,7 +1,24 @@
 <?php
 /**
  * Harbor Light Header Block
+ *
+ * @var array    $attributes Block attributes.
+ * @var string   $content    Block default content.
+ * @var WP_Block $block      Block instance.
  */
+
+$logo_text = $attributes['logoText'] ?? 'Harbor Light';
+$nav_links = $attributes['navLinks'] ?? [
+    ['label' => 'About', 'url' => '#about'],
+    ['label' => 'Programs', 'url' => '#programs'],
+    ['label' => 'Impact', 'url' => '#impact'],
+    ['label' => 'Stories', 'url' => '#stories'],
+    ['label' => 'Contact', 'url' => '#contact'],
+];
+$volunteer_text = $attributes['volunteerText'] ?? 'Volunteer';
+$volunteer_url = $attributes['volunteerUrl'] ?? '#volunteer';
+$donate_text = $attributes['donateText'] ?? 'Donate';
+$donate_url = $attributes['donateUrl'] ?? '#donate';
 ?>
 
 <header class="site-header">
@@ -28,20 +45,18 @@
                 <!-- Ground line -->
                 <path d="M10 44H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <span class="logo-text">Harbor Light</span>
+            <span class="logo-text"><?php echo esc_html($logo_text); ?></span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#impact">Impact</a></li>
-            <li><a href="#stories">Stories</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <?php foreach ($nav_links as $link) : ?>
+                <li><a href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a></li>
+            <?php endforeach; ?>
         </ul>
 
         <div class="nav-actions">
-            <a href="#volunteer" class="btn btn-ghost">Volunteer</a>
-            <a href="#donate" class="btn btn-primary">Donate</a>
+            <a href="<?php echo esc_url($volunteer_url); ?>" class="btn btn-ghost"><?php echo esc_html($volunteer_text); ?></a>
+            <a href="<?php echo esc_url($donate_url); ?>" class="btn btn-primary"><?php echo esc_html($donate_text); ?></a>
         </div>
 
         <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
@@ -54,15 +69,13 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" aria-hidden="true">
         <ul class="mobile-nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#impact">Impact</a></li>
-            <li><a href="#stories">Stories</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <?php foreach ($nav_links as $link) : ?>
+                <li><a href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a></li>
+            <?php endforeach; ?>
         </ul>
         <div class="mobile-nav-actions">
-            <a href="#volunteer" class="btn btn-ghost btn-block">Volunteer</a>
-            <a href="#donate" class="btn btn-primary btn-block">Donate</a>
+            <a href="<?php echo esc_url($volunteer_url); ?>" class="btn btn-ghost btn-block"><?php echo esc_html($volunteer_text); ?></a>
+            <a href="<?php echo esc_url($donate_url); ?>" class="btn btn-primary btn-block"><?php echo esc_html($donate_text); ?></a>
         </div>
     </div>
 </header>

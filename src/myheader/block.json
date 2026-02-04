@@ -1,20 +1,52 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "myblocks/myheader",
-	"version": "0.1.0",
-	"title": "Myheader",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
-	"example": {},
-	"supports": {
-		"html": false
-	},
-	"textdomain": "myheader",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"render": "file:./render.php",
-	"viewScript": "file:./view.js"
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/myheader",
+  "version": "0.1.0",
+  "title": "Header",
+  "category": "widgets",
+  "icon": "admin-home",
+  "description": "Harbor Light header with navigation and logo.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "logoText": {
+      "type": "string",
+      "default": "Harbor Light"
+    },
+    "navLinks": {
+      "type": "array",
+      "default": [
+        { "label": "About", "url": "#about" },
+        { "label": "Programs", "url": "#programs" },
+        { "label": "Impact", "url": "#impact" },
+        { "label": "Stories", "url": "#stories" },
+        { "label": "Contact", "url": "#contact" }
+      ]
+    },
+    "volunteerText": {
+      "type": "string",
+      "default": "Volunteer"
+    },
+    "volunteerUrl": {
+      "type": "string",
+      "default": "#volunteer"
+    },
+    "donateText": {
+      "type": "string",
+      "default": "Donate"
+    },
+    "donateUrl": {
+      "type": "string",
+      "default": "#donate"
+    }
+  },
+  "textdomain": "myheader",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
 }
