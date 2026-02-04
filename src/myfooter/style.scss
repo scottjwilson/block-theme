@@ -1,297 +1,287 @@
 /**
- * Footer Block Styles
- * Design: Dark navy background, organized grid, newsletter bar
+ * Harbor Light Footer Styles
  */
 
-/* Newsletter/CTA Bar - positioned above footer */
-.footer-cta {
-  background: var(--wp--preset--color--accent);
-  padding: var(--wp--preset--spacing--50) 0;
+.site-footer {
+  background: #1a2744;
+  color: #faf8f5;
+  padding: 5rem 0 2rem;
 }
 
-.footer-cta__inner {
-  max-width: var(--wp--custom--container);
+.site-footer .container {
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--wp--preset--spacing--40);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--wp--preset--spacing--40);
+  padding: 0 2rem;
 }
 
-.footer-cta__text {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--wp--preset--color--canvas);
-  margin: 0;
-}
-
-.footer-cta__btn {
-  display: inline-block;
-  padding: 0.875rem 1.75rem;
-  background-color: var(--wp--preset--color--canvas);
-  color: var(--wp--preset--color--accent);
-  text-decoration: none;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all var(--wp--custom--transition--fast);
-  white-space: nowrap;
-
-  &:hover {
-    background-color: var(--wp--preset--color--primary);
-    color: var(--wp--preset--color--canvas);
-    transform: translateY(-2px);
-  }
-}
-
-/* Main Footer */
-.footer {
-  background: var(--wp--preset--color--ink);
-  color: var(--wp--preset--color--canvas);
-  padding: var(--wp--preset--spacing--70) 0 var(--wp--preset--spacing--40);
-}
-
-.footer__inner {
-  max-width: var(--wp--custom--container);
-  margin: 0 auto;
-  padding: 0 var(--wp--preset--spacing--40);
+.footer-main {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: var(--wp--preset--spacing--50);
+  grid-template-columns: 1.5fr 2fr 1.2fr;
+  gap: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(250, 248, 245, 0.1);
+  margin-bottom: 2rem;
 }
 
-.footer__brand {
-  max-width: 300px;
-}
-
-.footer__logo {
+/* Footer Brand */
+.footer-brand .logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--wp--preset--font-family--system);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--wp--preset--color--canvas);
-  margin-bottom: var(--wp--preset--spacing--30);
+  color: #faf8f5;
   text-decoration: none;
-}
+  margin-bottom: 1.5rem;
+  transition: color 300ms;
 
-.footer__logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: var(--wp--preset--color--primary);
-  border-radius: 8px;
-  color: var(--wp--preset--color--canvas);
-
-  svg {
-    width: 20px;
-    height: 20px;
+  &:hover {
+    color: #d4a24c;
   }
 }
 
-.footer__mission {
-  color: rgba(255, 255, 255, 0.7);
+.footer-brand .logo-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.footer-brand .logo-text {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: rgba(250, 248, 245, 0.7);
+  margin-bottom: 2rem;
+}
+
+.footer-address {
+  font-style: normal;
   font-size: 0.9375rem;
-  line-height: 1.7;
-  margin-bottom: var(--wp--preset--spacing--40);
+  color: rgba(250, 248, 245, 0.7);
+  line-height: 1.8;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 300ms;
+
+    &:hover {
+      color: #d4a24c;
+    }
+  }
 }
 
-/* Newsletter form in footer brand section */
-.footer__newsletter {
-  margin-top: var(--wp--preset--spacing--30);
+/* Footer Navigation */
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.footer__newsletter-label {
-  font-size: 0.8125rem;
+.footer-nav-group h4 {
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--wp--preset--spacing--20);
-  display: block;
+  color: #d4a24c;
+  margin-bottom: 1.5rem;
 }
 
-.footer__newsletter-form {
+.footer-nav-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 0;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.footer__newsletter-input {
+.footer-nav-group a {
+  font-size: 0.9375rem;
+  color: rgba(250, 248, 245, 0.7);
+  text-decoration: none;
+  transition: color 300ms;
+
+  &:hover {
+    color: #faf8f5;
+  }
+}
+
+/* Footer Newsletter */
+.footer-newsletter h4 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer-newsletter > p {
+  font-size: 0.9375rem;
+  color: rgba(250, 248, 245, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form input {
   flex: 1;
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px 0 0 6px;
-  color: var(--wp--preset--color--canvas);
-  font-size: 0.875rem;
+  background: rgba(250, 248, 245, 0.1);
+  border: 1px solid rgba(250, 248, 245, 0.2);
+  border-radius: 4px;
+  color: #faf8f5;
+  font-size: 0.9375rem;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(250, 248, 245, 0.5);
   }
 
   &:focus {
     outline: none;
-    border-color: var(--wp--preset--color--primary);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: #d4a24c;
   }
 }
 
-.footer__newsletter-btn {
+.newsletter-form .btn {
   padding: 0.75rem 1.25rem;
-  background-color: var(--wp--preset--color--primary);
-  color: var(--wp--preset--color--canvas);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
   border: none;
-  border-radius: 0 6px 6px 0;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--wp--custom--transition--fast);
-
-  &:hover {
-    background-color: var(--wp--preset--color--primary-dark);
-  }
-}
-
-.footer__column {
-  /* Column styles */
-}
-
-.footer__heading {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: var(--wp--preset--spacing--30);
-  color: var(--wp--preset--color--canvas);
-}
-
-.footer__links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer__links li {
-  margin-bottom: var(--wp--preset--spacing--20);
-}
-
-.footer__links a {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9375rem;
-  transition: color var(--wp--custom--transition--fast);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #d4a24c;
+  color: #0f1a2e;
 
   &:hover {
-    color: var(--wp--preset--color--canvas);
+    background: #b8872e;
   }
 }
 
-.footer__contact p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9375rem;
-  margin-bottom: var(--wp--preset--spacing--20);
+/* Footer Social */
+.footer-social {
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-
-  svg {
-    flex-shrink: 0;
-    margin-top: 0.2rem;
-    opacity: 0.7;
-  }
+  gap: 1rem;
 }
 
-/* Social links in footer */
-.footer__social {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: var(--wp--preset--spacing--30);
-}
-
-.footer__social-link {
+.footer-social a {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  color: var(--wp--preset--color--canvas);
-  transition: all var(--wp--custom--transition--fast);
+  background: rgba(250, 248, 245, 0.1);
+  border-radius: 4px;
+  color: #faf8f5;
+  transition: all 300ms;
 
   &:hover {
-    background-color: var(--wp--preset--color--primary);
+    background: #d4a24c;
+    color: #1a2744;
   }
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* Footer Bottom */
-.footer__bottom {
-  max-width: var(--wp--custom--container);
-  margin: var(--wp--preset--spacing--50) auto 0;
-  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40) 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.footer-bottom {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: var(--wp--preset--font-size--small);
-}
-
-.footer__bottom-links {
-  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
-.footer__bottom-links a {
-  color: rgba(255, 255, 255, 0.5);
+.footer-legal {
+  font-size: 0.9375rem;
+  color: rgba(250, 248, 245, 0.5);
+}
+
+.footer-legal-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-legal-nav a {
+  font-size: 0.9375rem;
+  color: rgba(250, 248, 245, 0.5);
   text-decoration: none;
-  transition: color var(--wp--custom--transition--fast);
+  transition: color 300ms;
 
   &:hover {
-    color: var(--wp--preset--color--canvas);
+    color: #faf8f5;
   }
 }
 
-@media (max-width: 900px) {
-  .footer__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--wp--preset--spacing--40);
-  }
-
-  .footer__brand {
-    grid-column: 1 / -1;
-    max-width: none;
-  }
-
-  .footer-cta__inner {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 500px) {
-  .footer__inner {
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-main {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  .footer__bottom {
+  .footer-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
 
-  .footer__newsletter-form {
+  .footer-legal-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-form {
     flex-direction: column;
   }
 
-  .footer__newsletter-input {
-    border-radius: 6px;
-  }
-
-  .footer__newsletter-btn {
-    border-radius: 6px;
-    margin-top: 0.5rem;
+  .footer-nav {
+    grid-template-columns: 1fr;
   }
 }

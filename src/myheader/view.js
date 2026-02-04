@@ -1,25 +1,50 @@
 /**
- * Use this file for JavaScript code that you want to run in the front-end
- * on posts/pages that contain this block.
- *
- * When this file is defined as the value of the `viewScript` property
- * in `block.json` it will be enqueued on the front end of the site.
- *
- * Example:
- *
- * ```js
- * {
- *   "viewScript": "file:./view.js"
- * }
- * ```
- *
- * If you're not making any changes to this file because your project doesn't need any
- * JavaScript running in the front-end, then you should delete this file and remove
- * the `viewScript` property from `block.json`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
+ * Harbor Light Header - Mobile Menu Toggle
  */
 
-/* eslint-disable no-console */
-console.log("Hello World! (from myblocks-myheader block)");
-/* eslint-enable no-console */
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileToggle = document.querySelector(".mobile-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const body = document.body;
+
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener("click", function () {
+      const isActive = mobileToggle.classList.contains("is-active");
+
+      mobileToggle.classList.toggle("is-active");
+      mobileMenu.classList.toggle("is-active");
+      mobileToggle.setAttribute("aria-expanded", !isActive);
+      mobileMenu.setAttribute("aria-hidden", isActive);
+
+      // Prevent body scroll when menu is open
+      if (!isActive) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "";
+      }
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileToggle.classList.remove("is-active");
+        mobileMenu.classList.remove("is-active");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        body.style.overflow = "";
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mobileMenu.classList.contains("is-active")) {
+        mobileToggle.classList.remove("is-active");
+        mobileMenu.classList.remove("is-active");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        body.style.overflow = "";
+      }
+    });
+  }
+});

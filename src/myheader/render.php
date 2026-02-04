@@ -1,68 +1,68 @@
 <?php
 /**
- * PHP file to use when rendering the block type on the server to show on the front end.
- *
- * The following variables are exposed to the file:
- *     $attributes (array): The block attributes.
- *     $content (string): The block default content.
- *     $block (WP_Block): The block instance.
- *
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
+ * Harbor Light Header Block
  */
 ?>
 
-<header class="header">
-  <!-- Top Bar -->
-  <div class="header__topbar">
-    <div class="header__topbar-inner">
-      <div class="header__contact">
-        <a href="tel:+88123456789" class="header__contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span>(+88) 123 456 789</span>
+<header class="site-header">
+    <nav class="nav-container">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
+            <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Lighthouse base -->
+                <path d="M18 44V28H30V44" stroke="currentColor" stroke-width="2" fill="none"/>
+                <!-- Lighthouse tower -->
+                <path d="M16 28L20 12H28L32 28H16Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <!-- Light housing -->
+                <rect x="20" y="6" width="8" height="6" rx="1" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.2"/>
+                <!-- Light beam left -->
+                <path d="M18 9L6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                <path d="M17 11L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <!-- Light beam right -->
+                <path d="M30 9L42 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                <path d="M31 11L44 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <!-- Top -->
+                <path d="M22 6V4C22 3.44772 22.4477 3 23 3H25C25.5523 3 26 3.44772 26 4V6" stroke="currentColor" stroke-width="2"/>
+                <!-- Windows -->
+                <rect x="22" y="16" width="4" height="5" rx="0.5" fill="currentColor" opacity="0.3"/>
+                <rect x="22" y="32" width="4" height="6" rx="0.5" fill="currentColor" opacity="0.3"/>
+                <!-- Ground line -->
+                <path d="M10 44H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-text">Harbor Light</span>
         </a>
-        <a href="mailto:contact@domain.com" class="header__contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>contact@domain.com</span>
-        </a>
-        <span class="header__contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>3146 Koontz Lane, California</span>
-        </span>
-      </div>
-      <div class="header__social">
-        <a href="#" class="header__social-link" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </a>
-        <a href="#" class="header__social-link" aria-label="Twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-        </a>
-        <a href="#" class="header__social-link" aria-label="YouTube">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"></polygon></svg>
-        </a>
-        <a href="#" class="header__social-link" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="#" class="header__social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Main Navigation -->
-  <div class="header__main">
-    <div class="header__inner">
-      <a href="/" class="header__logo">Harborlight Foundation</a>
-      <nav class="header__nav" aria-label="Main navigation">
-        <ul class="header__nav-list" id="nav-menu">
-          <li><a href="/" class="header__nav-link header__nav-link--active">Home</a></li>
-          <li><a href="/about" class="header__nav-link">About Us</a></li>
-          <li><a href="/events" class="header__nav-link">Events</a></li>
-          <li><a href="/campaigns" class="header__nav-link">Campaigns</a></li>
-          <li><a href="/contact" class="header__nav-link">Contact</a></li>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="/donate" class="header__cta">Donate Now</a>
-      </nav>
+
+        <div class="nav-actions">
+            <a href="#volunteer" class="btn btn-ghost">Volunteer</a>
+            <a href="#donate" class="btn btn-primary">Donate</a>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="#volunteer" class="btn btn-ghost btn-block">Volunteer</a>
+            <a href="#donate" class="btn btn-primary btn-block">Donate</a>
+        </div>
     </div>
-  </div>
 </header>
