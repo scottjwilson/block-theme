@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/stats-bar",
+  "version": "0.1.0",
+  "title": "Stats Bar",
+  "category": "widgets",
+  "icon": "chart-line",
+  "description": "Harbor Light stats bar with key metrics.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "stats": {
+      "type": "array",
+      "default": [
+        {
+          "value": "8",
+          "title": "Years of Service",
+          "description": "Serving the Puget Sound since 2016"
+        },
+        {
+          "value": "12K+",
+          "title": "People Served",
+          "description": "Adults, youth, and families supported"
+        },
+        {
+          "value": "78%",
+          "title": "Housing Success",
+          "description": "Clients in stable housing after 1 year"
+        },
+        {
+          "value": "340",
+          "title": "Active Volunteers",
+          "description": "Community members making a difference"
+        }
+      ]
+    }
+  },
+  "textdomain": "stats-bar",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

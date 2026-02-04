@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/impact",
+  "version": "0.1.0",
+  "title": "Impact",
+  "category": "widgets",
+  "icon": "chart-bar",
+  "description": "Harbor Light impact section with metrics and progress bars.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Impact"
+    },
+    "title": {
+      "type": "string",
+      "default": "Real outcomes,"
+    },
+    "titleHighlight": {
+      "type": "string",
+      "default": "measured carefully"
+    },
+    "description": {
+      "type": "string",
+      "default": "We track what matters: not just beds filled, but lives rebuilt. Our outcomes-focused approach means every program is designed with long-term stability as the goal."
+    },
+    "metrics": {
+      "type": "array",
+      "default": [
+        {
+          "value": "78%",
+          "percentage": 78,
+          "label": "maintain housing after one year"
+        },
+        {
+          "value": "85%",
+          "percentage": 85,
+          "label": "of job training graduates find employment"
+        },
+        {
+          "value": "92%",
+          "percentage": 92,
+          "label": "of youth show improved school performance"
+        }
+      ]
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "View Annual Report"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "image1Alt": {
+      "type": "string",
+      "default": "Graduate receiving GED certificate"
+    },
+    "image2Alt": {
+      "type": "string",
+      "default": "Family moving into new apartment"
+    }
+  },
+  "textdomain": "impact",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

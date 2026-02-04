@@ -1,0 +1,13 @@
+.wp-block-myblocks-partners {
+  .partner-logo {
+    cursor: pointer;
+
+    &:focus-within {
+      opacity: 1;
+    }
+  }
+
+  .rich-text:focus {
+    outline: none;
+  }
+}

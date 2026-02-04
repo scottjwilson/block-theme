@@ -1,14 +1,9 @@
-/**
- * About Block Editor Styles
- */
-
 .wp-block-myblocks-about {
-  .image-placeholder {
-    min-height: 180px;
+  .rich-text:focus {
+    outline: none;
   }
 
-  .about-image-2 .image-placeholder {
-    min-height: 100%;
-    height: 100%;
+  .team-link {
+    pointer-events: none;
   }
 }

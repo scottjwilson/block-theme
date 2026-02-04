@@ -1,0 +1,21 @@
+/**
+ * Harbor Light Impact Block Editor Styles
+ */
+
+.wp-block-myblocks-impact {
+  .metric {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .rich-text:focus {
+    outline: none;
+  }
+
+  .btn {
+    pointer-events: none;
+  }
+}

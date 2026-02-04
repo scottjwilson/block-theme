@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/cta-section",
+  "version": "0.1.0",
+  "title": "CTA Section",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Harbor Light call-to-action section with three action cards.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Be the light"
+    },
+    "titleHighlight": {
+      "type": "string",
+      "default": "someone needs"
+    },
+    "description": {
+      "type": "string",
+      "default": "Whether you give your time, talent, or treasure, you become part of someone's journey from uncertainty to stability."
+    },
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "heart",
+          "title": "Donate",
+          "description": "$75 provides a week of tutoring. $250 covers job training materials. Every gift matters.",
+          "buttonText": "Give Now",
+          "buttonUrl": "#",
+          "buttonStyle": "primary",
+          "highlight": false
+        },
+        {
+          "icon": "volunteer",
+          "title": "Volunteer",
+          "description": "Tutor, mentor, teach a workshop, or help with events. We'll match your skills to our needs.",
+          "buttonText": "Get Involved",
+          "buttonUrl": "#",
+          "buttonStyle": "white",
+          "highlight": true
+        },
+        {
+          "icon": "email",
+          "title": "Stay Connected",
+          "description": "Join our community for monthly updates, success stories, and ways to help.",
+          "buttonText": "Subscribe",
+          "buttonUrl": "#",
+          "buttonStyle": "outline",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  "textdomain": "cta-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

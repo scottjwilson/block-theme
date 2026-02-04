@@ -1,116 +1,204 @@
-/**
- * WordPress dependencies
- */
 import { __ } from "@wordpress/i18n";
-import { useBlockProps } from "@wordpress/block-editor";
-
-/**
- * Editor styles
- */
+import { useBlockProps, RichText, InspectorControls } from "@wordpress/block-editor";
+import { PanelBody, TextControl, TextareaControl, Button } from "@wordpress/components";
 import "./editor.scss";
 
-/**
- * About block edit component
- */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
+  const {
+    eyebrow,
+    title,
+    titleHighlight,
+    paragraphs,
+    teamTitle,
+    teamMembers,
+    teamLinkText,
+    teamLinkUrl,
+    imageAlt,
+  } = attributes;
+
+  const updateParagraph = (index, value) => {
+    const newParagraphs = [...paragraphs];
+    newParagraphs[index] = value;
+    setAttributes({ paragraphs: newParagraphs });
+  };
+
+  const addParagraph = () => {
+    setAttributes({ paragraphs: [...paragraphs, "New paragraph..."] });
+  };
+
+  const removeParagraph = (index) => {
+    setAttributes({ paragraphs: paragraphs.filter((_, i) => i !== index) });
+  };
+
+  const updateTeamMember = (index, field, value) => {
+    const newMembers = [...teamMembers];
+    newMembers[index] = { ...newMembers[index], [field]: value };
+    setAttributes({ teamMembers: newMembers });
+  };
+
+  const addTeamMember = () => {
+    setAttributes({
+      teamMembers: [...teamMembers, { name: "New Member", role: "Role" }]
+    });
+  };
+
+  const removeTeamMember = (index) => {
+    setAttributes({ teamMembers: teamMembers.filter((_, i) => i !== index) });
+  };
+
   return (
-    <section {...useBlockProps({ className: "wp-block-myblocks-about" })}>
-      <div className="about-container">
-        <div className="about-images">
-          <div className="about-image about-image-1">
-            <div className="image-placeholder">{__("Image 1", "about")}</div>
-          </div>
-          <div className="about-image about-image-2">
-            <div className="image-placeholder">{__("Image 2", "about")}</div>
-          </div>
-          <div className="about-image about-image-3">
-            <div className="image-placeholder">{__("Image 3", "about")}</div>
-          </div>
-        </div>
+    <>
+      <InspectorControls>
+        <PanelBody title={__("Section Header", "about")} initialOpen={true}>
+          <TextControl
+            label={__("Eyebrow", "about")}
+            value={eyebrow}
+            onChange={(value) => setAttributes({ eyebrow: value })}
+          />
+          <TextControl
+            label={__("Title", "about")}
+            value={title}
+            onChange={(value) => setAttributes({ title: value })}
+          />
+          <TextControl
+            label={__("Title Highlight", "about")}
+            value={titleHighlight}
+            onChange={(value) => setAttributes({ titleHighlight: value })}
+          />
+        </PanelBody>
 
-        <div className="about-content">
-          <span className="about-label">{__("About us", "about")}</span>
-          <h2 className="about-title">
-            {__("Making a Difference Together", "about")}
-          </h2>
-          <p className="about-description">
-            {__(
-              "We Are A Nonprofit Organization Dedicated To Creating Positive Change In Communities Worldwide. Our Mission Is To Empower Individuals, Protect The Environment, And Promote Social Equality Through Impactful Initiatives And Collaborative Efforts. With A Focus On Compassion And Sustainability, We Strive To Make A Lasting Difference Where It Matters Most.",
-              "about",
-            )}
-          </p>
+        <PanelBody title={__("Content Paragraphs", "about")} initialOpen={false}>
+          {paragraphs.map((para, index) => (
+            <div key={index} style={{ marginBottom: '1rem' }}>
+              <TextareaControl
+                label={`Paragraph ${index + 1}`}
+                value={para}
+                onChange={(value) => updateParagraph(index, value)}
+              />
+              {paragraphs.length > 1 && (
+                <Button isDestructive isSmall onClick={() => removeParagraph(index)}>
+                  {__("Remove", "about")}
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button isSecondary onClick={addParagraph}>
+            {__("Add Paragraph", "about")}
+          </Button>
+        </PanelBody>
 
-          <div className="about-cards">
-            <div className="about-card">
-              <div className="about-card-icon">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+        <PanelBody title={__("Team Preview", "about")} initialOpen={false}>
+          <TextControl
+            label={__("Section Title", "about")}
+            value={teamTitle}
+            onChange={(value) => setAttributes({ teamTitle: value })}
+          />
+          {teamMembers.map((member, index) => (
+            <div key={index} style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid #ddd' }}>
+              <TextControl
+                label={__("Name", "about")}
+                value={member.name}
+                onChange={(value) => updateTeamMember(index, "name", value)}
+              />
+              <TextControl
+                label={__("Role", "about")}
+                value={member.role}
+                onChange={(value) => updateTeamMember(index, "role", value)}
+              />
+              {teamMembers.length > 1 && (
+                <Button isDestructive isSmall onClick={() => removeTeamMember(index)}>
+                  {__("Remove", "about")}
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button isSecondary onClick={addTeamMember}>
+            {__("Add Team Member", "about")}
+          </Button>
+        </PanelBody>
+
+        <PanelBody title={__("Team Link", "about")} initialOpen={false}>
+          <TextControl
+            label={__("Link Text", "about")}
+            value={teamLinkText}
+            onChange={(value) => setAttributes({ teamLinkText: value })}
+          />
+          <TextControl
+            label={__("Link URL", "about")}
+            value={teamLinkUrl}
+            onChange={(value) => setAttributes({ teamLinkUrl: value })}
+          />
+        </PanelBody>
+
+        <PanelBody title={__("Image", "about")} initialOpen={false}>
+          <TextControl
+            label={__("Image Description", "about")}
+            value={imageAlt}
+            onChange={(value) => setAttributes({ imageAlt: value })}
+          />
+        </PanelBody>
+      </InspectorControls>
+
+      <section {...useBlockProps({ className: "about-section" })}>
+        <div className="container">
+          <div className="about-layout">
+            <div className="about-image">
+              <div className="image-placeholder">
+                <span>{imageAlt}</span>
               </div>
-              <h3 className="about-card-title">{__("Our Mission", "about")}</h3>
-              <p className="about-card-text">
-                {__(
-                  "Committed to building a better future through education, sustainability, & humanitarian support.",
-                  "about",
-                )}
-              </p>
             </div>
 
-            <div className="about-card">
-              <div className="about-card-icon">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
+            <div className="about-content">
+              <RichText
+                tagName="p"
+                className="section-eyebrow"
+                value={eyebrow}
+                onChange={(value) => setAttributes({ eyebrow: value })}
+                placeholder={__("Eyebrow...", "about")}
+              />
+              <h2 className="section-title">
+                <RichText
+                  tagName="span"
+                  value={title}
+                  onChange={(value) => setAttributes({ title: value })}
+                  placeholder={__("Title...", "about")}
+                />
+                <br />
+                <RichText
+                  tagName="em"
+                  value={titleHighlight}
+                  onChange={(value) => setAttributes({ titleHighlight: value })}
+                  placeholder={__("Highlight...", "about")}
+                />
+              </h2>
+              <div className="about-text">
+                {paragraphs.map((para, index) => (
+                  <RichText
+                    key={index}
+                    tagName="p"
+                    value={para}
+                    onChange={(value) => updateParagraph(index, value)}
+                    placeholder={__("Paragraph...", "about")}
+                  />
+                ))}
               </div>
-              <h3 className="about-card-title">{__("Our Vision", "about")}</h3>
-              <p className="about-card-text">
-                {__(
-                  "A world where every individual has access to essential resources and opportunities for growth.",
-                  "about",
-                )}
-              </p>
+
+              <div className="about-team-preview">
+                <h4>{teamTitle}</h4>
+                <ul className="team-list">
+                  {teamMembers.map((member, index) => (
+                    <li key={index}>
+                      <strong>{member.name}</strong>
+                      <span>{member.role}</span>
+                    </li>
+                  ))}
+                </ul>
+                <span className="team-link">{teamLinkText}</span>
+              </div>
             </div>
           </div>
-
-          <a href="#" className="about-cta">
-            {__("Learn More", "about")}
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

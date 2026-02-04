@@ -1,0 +1,19 @@
+/**
+ * Harbor Light Programs Block Editor Styles
+ */
+
+.wp-block-myblocks-programs {
+  .program-card {
+    cursor: pointer;
+
+    &:focus-within,
+    &:hover {
+      outline: 2px solid var(--wp-admin-theme-color, #007cba);
+      outline-offset: 2px;
+    }
+  }
+
+  .rich-text:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,223 @@
+/**
+ * Harbor Light Impact Block Styles
+ */
+
+.wp-block-myblocks-impact.impact-section {
+  padding: var(--wp--preset--spacing--3xl, 8rem) 0;
+  background: var(--wp--preset--color--cream-dark, #f0ebe3);
+}
+
+.impact-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.impact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--wp--preset--spacing--2xl, 4rem);
+  align-items: center;
+}
+
+.impact-content {
+  max-width: 560px;
+}
+
+/* Section Header */
+.impact-section .section-eyebrow {
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--amber-dark, #b8872e);
+  margin-bottom: var(--wp--preset--spacing--xs, 0.5rem);
+}
+
+.impact-section .section-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--navy, #1a2744);
+  margin-bottom: var(--wp--preset--spacing--md, 1.5rem);
+  line-height: 1.2;
+
+  em {
+    font-style: italic;
+    color: var(--wp--preset--color--amber-dark, #b8872e);
+  }
+}
+
+.impact-text {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
+  margin-bottom: var(--wp--preset--spacing--xl, 2rem);
+  line-height: 1.7;
+}
+
+/* Metrics */
+.impact-metrics {
+  margin-bottom: var(--wp--preset--spacing--xl, 2rem);
+}
+
+.metric {
+  margin-bottom: var(--wp--preset--spacing--lg, 1.5rem);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.metric-bar {
+  height: 8px;
+  background: var(--wp--preset--color--sand, #e8e0d4);
+  border-radius: 999px;
+  margin-bottom: var(--wp--preset--spacing--sm, 0.75rem);
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  width: var(--width);
+  background: linear-gradient(
+    90deg,
+    var(--wp--preset--color--navy, #1a2744),
+    var(--wp--preset--color--sea, #3d5a80)
+  );
+  border-radius: 999px;
+  animation: fillBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--width);
+  }
+}
+
+.metric-info {
+  display: flex;
+  align-items: baseline;
+  gap: var(--wp--preset--spacing--sm, 0.75rem);
+}
+
+.metric-value {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  color: var(--wp--preset--color--navy, #1a2744);
+}
+
+.metric-label {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
+}
+
+/* Button */
+.impact-section .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.impact-section .btn-outline {
+  background: transparent;
+  color: var(--wp--preset--color--navy, #1a2744);
+  box-shadow: inset 0 0 0 1.5px var(--wp--preset--color--navy, #1a2744);
+
+  &:hover {
+    background: var(--wp--preset--color--navy, #1a2744);
+    color: var(--wp--preset--color--cream, #faf8f5);
+  }
+}
+
+/* Visual / Images */
+.impact-visual {
+  position: relative;
+}
+
+.impact-image-stack {
+  position: relative;
+  padding: var(--wp--preset--spacing--lg, 1.5rem);
+}
+
+.impact-image-1 {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 4/3;
+  box-shadow:
+    0 12px 40px rgba(26, 39, 68, 0.08),
+    0 4px 12px rgba(26, 39, 68, 0.04);
+  border-radius: 12px;
+}
+
+.impact-image-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  aspect-ratio: 4/3;
+  z-index: 1;
+  opacity: 0.8;
+  border-radius: 12px;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  background: linear-gradient(135deg, #e8e0d4 0%, #f0ebe3 100%);
+  border: 2px dashed var(--wp--preset--color--stone, #9a918a);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: var(--wp--preset--color--stone, #9a918a);
+  font-size: 0.9375rem;
+  font-style: italic;
+  min-height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .impact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--wp--preset--spacing--xl, 3rem);
+  }
+
+  .impact-content {
+    max-width: none;
+  }
+
+  .impact-visual {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-image-stack {
+    padding: var(--wp--preset--spacing--md, 1rem);
+  }
+
+  .impact-image-2 {
+    width: 50%;
+  }
+}

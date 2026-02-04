@@ -1,0 +1,46 @@
+/**
+ * Harbor Light Partners Block Styles
+ */
+
+.wp-block-myblocks-partners.partners-section {
+  padding: var(--wp--preset--spacing--2xl, 3rem) 0;
+  background: var(--wp--preset--color--cream-dark, #f0ebe3);
+  border-top: 1px solid var(--wp--preset--color--sand, #e8e0d4);
+}
+
+.partners-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.partners-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--stone, #9a918a);
+  margin-bottom: var(--wp--preset--spacing--lg, 1.5rem);
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--xl, 2rem);
+}
+
+.partner-logo {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--wp--preset--color--stone, #9a918a);
+  opacity: 0.6;
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 1;
+  }
+}

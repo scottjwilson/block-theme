@@ -5,11 +5,56 @@
   "version": "0.1.0",
   "title": "About",
   "category": "widgets",
-  "icon": "groups",
-  "description": "About section with image collage and mission/vision cards.",
+  "icon": "info-outline",
+  "description": "Harbor Light about section with story and team preview.",
   "example": {},
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Story"
+    },
+    "title": {
+      "type": "string",
+      "default": "From a church basement"
+    },
+    "titleHighlight": {
+      "type": "string",
+      "default": "to a regional movement"
+    },
+    "paragraphs": {
+      "type": "array",
+      "default": [
+        "Harbor Light began in 2016 when Elena Vasquez, a social worker, watched her brother struggle with housing instability after a job loss. She saw how quickly circumstances could spiral—and how few resources existed to help people rebuild.",
+        "What started as a weekly tutoring session in a church basement has grown into a comprehensive network serving over 3,000 people annually across the Puget Sound region. Our approach has remained the same: meet people where they are, address root causes, and walk alongside them toward lasting stability."
+      ]
+    },
+    "teamTitle": {
+      "type": "string",
+      "default": "Leadership Team"
+    },
+    "teamMembers": {
+      "type": "array",
+      "default": [
+        { "name": "Elena Vasquez", "role": "Founder & Executive Director" },
+        { "name": "David Kim", "role": "Director of Programs" },
+        { "name": "Amara Johnson", "role": "Director of Development" }
+      ]
+    },
+    "teamLinkText": {
+      "type": "string",
+      "default": "Meet our full team →"
+    },
+    "teamLinkUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": "Photo: Elena Vasquez with founding volunteers, 2016"
+    }
   },
   "textdomain": "about",
   "editorScript": "file:./index.js",

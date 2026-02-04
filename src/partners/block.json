@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/partners",
+  "version": "0.1.0",
+  "title": "Partners",
+  "category": "widgets",
+  "icon": "networking",
+  "description": "Harbor Light partners/sponsors logo section.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Proud partners"
+    },
+    "partners": {
+      "type": "array",
+      "default": [
+        { "name": "Seattle Foundation" },
+        { "name": "United Way" },
+        { "name": "King County" },
+        { "name": "Amazon" },
+        { "name": "Microsoft" },
+        { "name": "Starbucks" }
+      ]
+    }
+  },
+  "textdomain": "partners",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

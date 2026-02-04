@@ -1,0 +1,69 @@
+/**
+ * Harbor Light Stats Bar Block Styles
+ */
+
+.wp-block-myblocks-stats-bar.stats-section {
+  padding: var(--wp--preset--spacing--2xl, 3rem) 0;
+  background: var(--wp--preset--color--navy, #1a2744);
+  color: var(--wp--preset--color--cream, #faf8f5);
+}
+
+.stats-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--xl, 2rem);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--wp--preset--spacing--sm, 0.75rem) var(--wp--preset--spacing--lg, 1.5rem);
+}
+
+.stat-value {
+  display: block;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  color: var(--wp--preset--color--amber, #d4a24c);
+  line-height: 1;
+  margin-bottom: var(--wp--preset--spacing--xs, 0.5rem);
+}
+
+.stat-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-desc {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--cream, #faf8f5);
+  opacity: 0.7;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(250, 248, 245, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    flex-direction: column;
+    gap: var(--wp--preset--spacing--lg, 1.5rem);
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+}

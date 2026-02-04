@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/stories",
+  "version": "0.1.0",
+  "title": "Stories",
+  "category": "widgets",
+  "icon": "groups",
+  "description": "Harbor Light stories section showcasing success stories.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Stories of Change"
+    },
+    "title": {
+      "type": "string",
+      "default": "The faces behind"
+    },
+    "titleHighlight": {
+      "type": "string",
+      "default": "our mission"
+    },
+    "stories": {
+      "type": "array",
+      "default": [
+        {
+          "imageAlt": "Portrait: Marcus, program graduate",
+          "tag": "Graduate Spotlight",
+          "title": "\"Harbor Light gave me permission to dream again\"",
+          "excerpt": "After losing his job and apartment in 2023, Marcus found his way to our Beacon Academy. Eighteen months later, he's a certified IT technician with a stable apartment and plans to start community college.",
+          "linkText": "Read Marcus's story",
+          "linkUrl": "#",
+          "featured": true
+        },
+        {
+          "imageAlt": "Portrait: The Rivera family",
+          "tag": "Family Story",
+          "title": "A fresh start for the Rivera family",
+          "excerpt": "With support from Anchor Housing and Youth Lantern, Maria and her two daughters found stability together.",
+          "linkText": "Read their story",
+          "linkUrl": "#",
+          "featured": false
+        },
+        {
+          "imageAlt": "Portrait: Volunteer James Chen",
+          "tag": "Volunteer Voice",
+          "title": "Why I tutor every Saturday",
+          "excerpt": "James has volunteered with Youth Lantern for 3 years. Here's what keeps him coming back.",
+          "linkText": "Read James's story",
+          "linkUrl": "#",
+          "featured": false
+        }
+      ]
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "View All Stories"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "stories",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

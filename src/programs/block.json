@@ -1,0 +1,82 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/programs",
+  "version": "0.1.0",
+  "title": "Programs",
+  "category": "widgets",
+  "icon": "grid-view",
+  "description": "Harbor Light programs section - Four pillars of support.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "What We Do"
+    },
+    "title": {
+      "type": "string",
+      "default": "Four pillars of support"
+    },
+    "description": {
+      "type": "string",
+      "default": "Our integrated approach addresses the complex challenges of homelessness through interconnected programs that support the whole person."
+    },
+    "programs": {
+      "type": "array",
+      "default": [
+        {
+          "number": "01",
+          "title": "Beacon Academy",
+          "tagline": "Education & Skills Training",
+          "description": "GED preparation, financial literacy, digital skills, and English language classes designed for adult learners rebuilding their lives. Flexible scheduling accommodates work and family responsibilities.",
+          "highlights": ["Free GED test preparation", "Computer literacy certification", "Financial coaching & credit repair"],
+          "linkText": "Learn about Beacon Academy",
+          "linkUrl": "#",
+          "icon": "education",
+          "featured": true
+        },
+        {
+          "number": "02",
+          "title": "Anchor Housing",
+          "tagline": "Transitional Support",
+          "description": "Safe, stable transitional housing with wraparound case management. Residents receive support with budgeting, job searching, and navigating permanent housing options.",
+          "highlights": [],
+          "linkText": "Explore housing programs",
+          "linkUrl": "#",
+          "icon": "home",
+          "featured": false
+        },
+        {
+          "number": "03",
+          "title": "Compass Careers",
+          "tagline": "Employment Services",
+          "description": "Job readiness training, resume building, interview prep, and direct placement with employer partners committed to fair-chance hiring.",
+          "highlights": [],
+          "linkText": "View career services",
+          "linkUrl": "#",
+          "icon": "calendar",
+          "featured": false
+        },
+        {
+          "number": "04",
+          "title": "Youth Lantern",
+          "tagline": "Children & Family Support",
+          "description": "After-school tutoring, mentorship, and enrichment programs for children experiencing housing instability. Summer programs available.",
+          "highlights": [],
+          "linkText": "Support youth programs",
+          "linkUrl": "#",
+          "icon": "youth",
+          "featured": false
+        }
+      ]
+    }
+  },
+  "textdomain": "programs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
