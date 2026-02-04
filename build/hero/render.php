@@ -52,7 +52,7 @@ $stat_label = $attributes['statLabel'] ?? 'Lives changed in 2025';
         <div class="hero-visual">
             <div class="hero-image-wrapper">
                 <div class="image-placeholder hero-image">
-                    <span>Hero Image: Volunteer helping client with paperwork at Harbor Light center</span>
+                 <img src="<?php echo esc_url($hero_image_url); ?>" alt="<?php echo esc_attr($hero_image_alt); ?>">
                 </div>
                 <div class="hero-image-accent"></div>
             </div>

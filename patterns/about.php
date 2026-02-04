@@ -6,8 +6,8 @@
  * Description: Our story - from a church basement to a regional movement.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"}} -->
-<div class="wp-block-group has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--4xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--4xl);padding-left:var(--wp--preset--spacing--xl)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1400px"}} -->
+<div class="wp-block-group has-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--3xl);padding-left:var(--wp--preset--spacing--xl)">
 
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|2xl"}}}} -->
     <div class="wp-block-columns">

@@ -6,8 +6,8 @@
  * Description: Be the light - donate, volunteer, subscribe cards.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"sand","layout":{"type":"constrained","contentSize":"1200px"}} -->
-<div class="wp-block-group has-sand-background-color has-background" style="padding-top:var(--wp--preset--spacing--4xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--4xl);padding-left:var(--wp--preset--spacing--xl)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"sand","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group has-sand-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-right:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--3xl);padding-left:var(--wp--preset--spacing--xl)">
 
     <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
     <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--2xl)">
