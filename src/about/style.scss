@@ -20,8 +20,10 @@
   align-items: start;
 }
 
-.about-image .image-placeholder {
+.about-image img {
+  width: 100%;
   aspect-ratio: 4/3;
+  object-fit: cover;
   position: sticky;
   top: 120px;
   border-radius: 12px;
@@ -156,7 +158,7 @@
     max-width: 600px;
   }
 
-  .about-image .image-placeholder {
+  .about-image img {
     position: static;
     aspect-ratio: 16/9;
   }

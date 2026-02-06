@@ -3,6 +3,12 @@
  * Harbor Light Stories Block
  */
 
+$story_images = [
+    'Marcus'  => 'story-marcus.jpg',
+    'Rivera'  => 'story-rivera.jpg',
+    'Chen'    => 'story-chen.jpg',
+];
+
 $eyebrow = $attributes['eyebrow'] ?? 'Stories of Change';
 $title = $attributes['title'] ?? 'The faces behind';
 $title_highlight = $attributes['titleHighlight'] ?? 'our mission';
@@ -26,9 +32,21 @@ $cta_url = $attributes['ctaUrl'] ?? '#';
             ?>
                 <article class="story-card <?php echo $is_featured ? 'story-card-featured' : ''; ?>">
                     <div class="story-image">
-                        <div class="image-placeholder">
-                            <span><?php echo esc_html($story['imageAlt']); ?></span>
-                        </div>
+                        <?php
+                        $story_img = '';
+                        foreach ($story_images as $key => $file) {
+                            if (stripos($story['imageAlt'], $key) !== false) {
+                                $story_img = $file;
+                                break;
+                            }
+                        }
+                        if ($story_img) : ?>
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/' . $story_img); ?>" alt="<?php echo esc_attr($story['imageAlt']); ?>" loading="lazy">
+                        <?php else : ?>
+                            <div class="image-placeholder">
+                                <span><?php echo esc_html($story['imageAlt']); ?></span>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="story-content">
                         <span class="story-tag"><?php echo esc_html($story['tag']); ?></span>

@@ -39,9 +39,7 @@ $arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path
                 <?php if ($is_featured) : ?>
                     <article class="program-card program-card-featured">
                         <div class="program-card-image">
-                            <div class="image-placeholder">
-                                <span>Image: Adult education classroom at <?php echo esc_attr($program['title']); ?></span>
-                            </div>
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/programs.jpg'); ?>" alt="Adult education classroom at <?php echo esc_attr($program['title']); ?>" loading="lazy">
                             <span class="program-number"><?php echo esc_html($program['number']); ?></span>
                         </div>
                         <div class="program-card-content">

@@ -17,9 +17,7 @@ $image_alt = $attributes['imageAlt'] ?? 'Photo: Elena Vasquez with founding volu
     <div class="container">
         <div class="about-layout">
             <div class="about-image">
-                <div class="image-placeholder">
-                    <span><?php echo esc_html($image_alt); ?></span>
-                </div>
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/about.jpg'); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy">
             </div>
 
             <div class="about-content">
