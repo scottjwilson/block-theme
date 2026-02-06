@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/volunteer-signup",
+  "version": "0.1.0",
+  "title": "Volunteer Signup",
+  "category": "widgets",
+  "icon": "clipboard",
+  "description": "Harbor Light volunteer signup form with contact sidebar.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heroEyebrow": {
+      "type": "string",
+      "default": "Volunteer"
+    },
+    "heroTitle": {
+      "type": "string",
+      "default": "Sign up to"
+    },
+    "heroTitleHighlight": {
+      "type": "string",
+      "default": "volunteer"
+    },
+    "heroDescription": {
+      "type": "string",
+      "default": "Fill out the form below and our volunteer coordinator will reach out within 48 hours to match you with the right opportunity."
+    },
+    "formEmail": {
+      "type": "string",
+      "default": "volunteer@harborlightfoundation.com"
+    },
+    "phone": {
+      "type": "string",
+      "default": "(253) 555-0147"
+    },
+    "email": {
+      "type": "string",
+      "default": "volunteer@harborlightfoundation.com"
+    },
+    "address": {
+      "type": "string",
+      "default": "1847 Harbor Avenue\nTacoma, WA 98402"
+    },
+    "steps": {
+      "type": "array",
+      "default": [
+        "Submit this interest form",
+        "Our coordinator contacts you within 48 hours",
+        "Attend a short orientation session",
+        "Start making a difference"
+      ]
+    }
+  },
+  "textdomain": "volunteer-signup",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

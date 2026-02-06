@@ -108,7 +108,7 @@
     },
     "ctaButtonUrl": {
       "type": "string",
-      "default": "mailto:volunteer@harborlightfoundation.com"
+      "default": "/volunteer/signup/"
     }
   },
   "textdomain": "volunteer-page",

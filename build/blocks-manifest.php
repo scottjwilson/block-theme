@@ -905,10 +905,75 @@ Seattle, WA 98126'
 			),
 			'ctaButtonUrl' => array(
 				'type' => 'string',
-				'default' => 'mailto:volunteer@harborlightfoundation.com'
+				'default' => '/volunteer/signup/'
 			)
 		),
 		'textdomain' => 'volunteer-page',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'volunteer-signup' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/volunteer-signup',
+		'version' => '0.1.0',
+		'title' => 'Volunteer Signup',
+		'category' => 'widgets',
+		'icon' => 'clipboard',
+		'description' => 'Harbor Light volunteer signup form with contact sidebar.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'heroEyebrow' => array(
+				'type' => 'string',
+				'default' => 'Volunteer'
+			),
+			'heroTitle' => array(
+				'type' => 'string',
+				'default' => 'Sign up to'
+			),
+			'heroTitleHighlight' => array(
+				'type' => 'string',
+				'default' => 'volunteer'
+			),
+			'heroDescription' => array(
+				'type' => 'string',
+				'default' => 'Fill out the form below and our volunteer coordinator will reach out within 48 hours to match you with the right opportunity.'
+			),
+			'formEmail' => array(
+				'type' => 'string',
+				'default' => 'volunteer@harborlightfoundation.com'
+			),
+			'phone' => array(
+				'type' => 'string',
+				'default' => '(253) 555-0147'
+			),
+			'email' => array(
+				'type' => 'string',
+				'default' => 'volunteer@harborlightfoundation.com'
+			),
+			'address' => array(
+				'type' => 'string',
+				'default' => '1847 Harbor Avenue
+Tacoma, WA 98402'
+			),
+			'steps' => array(
+				'type' => 'array',
+				'default' => array(
+					'Submit this interest form',
+					'Our coordinator contacts you within 48 hours',
+					'Attend a short orientation session',
+					'Start making a difference'
+				)
+			)
+		),
+		'textdomain' => 'volunteer-signup',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
