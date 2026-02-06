@@ -40,7 +40,7 @@
     },
     "donateUrl": {
       "type": "string",
-      "default": "/#contact"
+      "default": "/donate/"
     }
   },
   "textdomain": "myheader",

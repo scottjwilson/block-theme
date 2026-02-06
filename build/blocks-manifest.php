@@ -143,6 +143,136 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'donate-page' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/donate-page',
+		'version' => '0.1.0',
+		'title' => 'Donate Page',
+		'category' => 'widgets',
+		'icon' => 'heart',
+		'description' => 'Harbor Light donation page with giving tiers and impact info.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'heroEyebrow' => array(
+				'type' => 'string',
+				'default' => 'Support Our Mission'
+			),
+			'heroTitle' => array(
+				'type' => 'string',
+				'default' => 'Your generosity'
+			),
+			'heroTitleHighlight' => array(
+				'type' => 'string',
+				'default' => 'changes lives'
+			),
+			'heroDescription' => array(
+				'type' => 'string',
+				'default' => 'Every dollar goes directly toward shelter, education, job training, and mental health support for individuals and families rebuilding their lives.'
+			),
+			'tiers' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'amount' => '$25',
+						'title' => 'Essentials Kit',
+						'description' => 'Provides hygiene supplies, socks, and a warm meal for someone entering our shelter.'
+					),
+					array(
+						'amount' => '$75',
+						'title' => 'Week of Tutoring',
+						'description' => 'Funds one week of one-on-one GED tutoring sessions for an adult learner.'
+					),
+					array(
+						'amount' => '$150',
+						'title' => 'Job Ready',
+						'description' => 'Covers interview clothes, resume printing, and transportation to job interviews for one client.'
+					),
+					array(
+						'amount' => '$250',
+						'title' => 'Training Materials',
+						'description' => 'Supplies a full set of job training materials and certification exam fees.'
+					),
+					array(
+						'amount' => '$500',
+						'title' => 'Month of Housing',
+						'description' => 'Supports one month of transitional housing for an individual working toward stability.'
+					)
+				)
+			),
+			'impactTitle' => array(
+				'type' => 'string',
+				'default' => 'Your impact in numbers'
+			),
+			'impactItems' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'stat' => '94¢',
+						'label' => 'Of every dollar goes to programs'
+					),
+					array(
+						'stat' => '3,247',
+						'label' => 'Lives changed last year'
+					),
+					array(
+						'stat' => '78%',
+						'label' => 'Of clients achieve stable housing'
+					)
+				)
+			),
+			'waysTitle' => array(
+				'type' => 'string',
+				'default' => 'Other ways to give'
+			),
+			'ways' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Monthly Giving',
+						'description' => 'Join our Lighthouse Circle with a recurring gift. Monthly donors provide the steady funding that keeps our programs running year-round.',
+						'icon' => 'recurring'
+					),
+					array(
+						'title' => 'Employer Matching',
+						'description' => 'Double your impact. Many employers match charitable gifts — check with your HR department to see if your company participates.',
+						'icon' => 'matching'
+					),
+					array(
+						'title' => 'Legacy Giving',
+						'description' => 'Include Harbor Light in your estate plan and create a lasting legacy of hope for future generations.',
+						'icon' => 'legacy'
+					)
+				)
+			),
+			'ctaTitle' => array(
+				'type' => 'string',
+				'default' => 'Ready to make a difference?'
+			),
+			'ctaDescription' => array(
+				'type' => 'string',
+				'default' => 'Your tax-deductible gift directly funds programs that transform lives. Harbor Light Foundation is a registered 501(c)(3) nonprofit.'
+			),
+			'ctaButtonText' => array(
+				'type' => 'string',
+				'default' => 'Donate Now'
+			),
+			'ctaButtonUrl' => array(
+				'type' => 'string',
+				'default' => '#'
+			)
+		),
+		'textdomain' => 'donate-page',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'hero' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -516,7 +646,7 @@ Seattle, WA 98126'
 			),
 			'donateUrl' => array(
 				'type' => 'string',
-				'default' => '/#contact'
+				'default' => '/donate/'
 			)
 		),
 		'textdomain' => 'myheader',

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/donate-page",
+  "version": "0.1.0",
+  "title": "Donate Page",
+  "category": "widgets",
+  "icon": "heart",
+  "description": "Harbor Light donation page with giving tiers and impact info.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heroEyebrow": {
+      "type": "string",
+      "default": "Support Our Mission"
+    },
+    "heroTitle": {
+      "type": "string",
+      "default": "Your generosity"
+    },
+    "heroTitleHighlight": {
+      "type": "string",
+      "default": "changes lives"
+    },
+    "heroDescription": {
+      "type": "string",
+      "default": "Every dollar goes directly toward shelter, education, job training, and mental health support for individuals and families rebuilding their lives."
+    },
+    "tiers": {
+      "type": "array",
+      "default": [
+        {
+          "amount": "$25",
+          "title": "Essentials Kit",
+          "description": "Provides hygiene supplies, socks, and a warm meal for someone entering our shelter."
+        },
+        {
+          "amount": "$75",
+          "title": "Week of Tutoring",
+          "description": "Funds one week of one-on-one GED tutoring sessions for an adult learner."
+        },
+        {
+          "amount": "$150",
+          "title": "Job Ready",
+          "description": "Covers interview clothes, resume printing, and transportation to job interviews for one client."
+        },
+        {
+          "amount": "$250",
+          "title": "Training Materials",
+          "description": "Supplies a full set of job training materials and certification exam fees."
+        },
+        {
+          "amount": "$500",
+          "title": "Month of Housing",
+          "description": "Supports one month of transitional housing for an individual working toward stability."
+        }
+      ]
+    },
+    "impactTitle": {
+      "type": "string",
+      "default": "Your impact in numbers"
+    },
+    "impactItems": {
+      "type": "array",
+      "default": [
+        {
+          "stat": "94¢",
+          "label": "Of every dollar goes to programs"
+        },
+        {
+          "stat": "3,247",
+          "label": "Lives changed last year"
+        },
+        {
+          "stat": "78%",
+          "label": "Of clients achieve stable housing"
+        }
+      ]
+    },
+    "waysTitle": {
+      "type": "string",
+      "default": "Other ways to give"
+    },
+    "ways": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Monthly Giving",
+          "description": "Join our Lighthouse Circle with a recurring gift. Monthly donors provide the steady funding that keeps our programs running year-round.",
+          "icon": "recurring"
+        },
+        {
+          "title": "Employer Matching",
+          "description": "Double your impact. Many employers match charitable gifts — check with your HR department to see if your company participates.",
+          "icon": "matching"
+        },
+        {
+          "title": "Legacy Giving",
+          "description": "Include Harbor Light in your estate plan and create a lasting legacy of hope for future generations.",
+          "icon": "legacy"
+        }
+      ]
+    },
+    "ctaTitle": {
+      "type": "string",
+      "default": "Ready to make a difference?"
+    },
+    "ctaDescription": {
+      "type": "string",
+      "default": "Your tax-deductible gift directly funds programs that transform lives. Harbor Light Foundation is a registered 501(c)(3) nonprofit."
+    },
+    "ctaButtonText": {
+      "type": "string",
+      "default": "Donate Now"
+    },
+    "ctaButtonUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "donate-page",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
