@@ -1,0 +1,243 @@
+/**
+ * Harbor Light Volunteer Page Block Styles
+ */
+
+/* ---- Hero Section ---- */
+.volunteer-hero {
+  position: relative;
+  padding: var(--wp--preset--spacing--3xl, 8rem) 0 var(--wp--preset--spacing--2xl, 5rem);
+  overflow: hidden;
+  text-align: center;
+}
+
+.volunteer-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--wp--preset--color--navy, #1a2744);
+}
+
+.volunteer-hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.volunteer-hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.volunteer-hero-eyebrow {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--amber, #d4a24c);
+  margin-bottom: var(--wp--preset--spacing--sm, 1rem);
+}
+
+.volunteer-hero-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--white, #ffffff);
+  line-height: 1.15;
+  margin-bottom: var(--wp--preset--spacing--md, 1.5rem);
+
+  em {
+    font-style: italic;
+    color: var(--wp--preset--color--amber, #d4a24c);
+  }
+}
+
+.volunteer-hero-description {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  color: rgba(250, 248, 245, 0.8);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto var(--wp--preset--spacing--xl, 2rem);
+}
+
+/* ---- Opportunities Section ---- */
+.volunteer-opportunities {
+  padding: var(--wp--preset--spacing--3xl, 8rem) 0;
+  background: var(--wp--preset--color--cream, #faf8f5);
+}
+
+.volunteer-opportunities .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.volunteer-opportunities .section-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--navy, #1a2744);
+  margin-bottom: var(--wp--preset--spacing--2xl, 4rem);
+  text-align: center;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--wp--preset--spacing--lg, 2rem);
+}
+
+.opportunity-card {
+  background: var(--wp--preset--color--white, #ffffff);
+  border-radius: 12px;
+  padding: var(--wp--preset--spacing--xl, 2rem);
+  box-shadow: 0 1px 3px rgba(26, 39, 68, 0.04);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 12px 40px rgba(26, 39, 68, 0.08),
+      0 4px 12px rgba(26, 39, 68, 0.04);
+  }
+}
+
+.opportunity-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--wp--preset--spacing--md, 1rem);
+  color: var(--wp--preset--color--navy, #1a2744);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.opportunity-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--navy, #1a2744);
+  margin-bottom: var(--wp--preset--spacing--xs, 0.25rem);
+}
+
+.opportunity-commitment {
+  display: inline-block;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--amber-dark, #916b20);
+  margin-bottom: var(--wp--preset--spacing--sm, 0.75rem);
+}
+
+.opportunity-description {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
+  line-height: 1.7;
+}
+
+/* ---- Why Volunteer Section ---- */
+.volunteer-why {
+  padding: var(--wp--preset--spacing--2xl, 5rem) 0;
+  background: var(--wp--preset--color--cream-dark, #f0ebe3);
+  border-top: 1px solid var(--wp--preset--color--sand, #e8e0d4);
+  border-bottom: 1px solid var(--wp--preset--color--sand, #e8e0d4);
+}
+
+.volunteer-why .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.volunteer-why .section-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--navy, #1a2744);
+  margin-bottom: var(--wp--preset--spacing--xl, 3rem);
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--wp--preset--spacing--xl, 2rem);
+  text-align: center;
+}
+
+.why-stat {
+  display: block;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  color: var(--wp--preset--color--navy, #1a2744);
+  line-height: 1;
+  margin-bottom: var(--wp--preset--spacing--xs, 0.5rem);
+}
+
+.why-label {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
+  line-height: 1.5;
+}
+
+/* ---- CTA Section ---- */
+.volunteer-cta {
+  padding: var(--wp--preset--spacing--3xl, 8rem) 0;
+  background: var(--wp--preset--color--cream, #faf8f5);
+}
+
+.volunteer-cta .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.volunteer-cta-card {
+  background: var(--wp--preset--color--navy, #1a2744);
+  border-radius: 16px;
+  padding: var(--wp--preset--spacing--2xl, 4rem);
+  text-align: center;
+}
+
+.volunteer-cta-title {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  font-weight: 400;
+  color: var(--wp--preset--color--white, #ffffff);
+  margin-bottom: var(--wp--preset--spacing--md, 1rem);
+}
+
+.volunteer-cta-description {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  color: rgba(250, 248, 245, 0.8);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto var(--wp--preset--spacing--xl, 2rem);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .opportunities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: var(--wp--preset--spacing--lg, 2rem);
+  }
+
+  .volunteer-cta-card {
+    padding: var(--wp--preset--spacing--xl, 2rem);
+  }
+}

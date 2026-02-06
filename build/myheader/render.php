@@ -16,7 +16,7 @@ $nav_links = $attributes['navLinks'] ?? [
     ['label' => 'Contact', 'url' => '#contact'],
 ];
 $volunteer_text = $attributes['volunteerText'] ?? 'Volunteer';
-$volunteer_url = $attributes['volunteerUrl'] ?? '#contact';
+$volunteer_url = $attributes['volunteerUrl'] ?? '/volunteer/';
 $donate_text = $attributes['donateText'] ?? 'Donate';
 $donate_url = $attributes['donateUrl'] ?? '#contact';
 ?>

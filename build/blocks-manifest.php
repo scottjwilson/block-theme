@@ -792,5 +792,126 @@ Seattle, WA 98126'
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
+	),
+	'volunteer-page' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/volunteer-page',
+		'version' => '0.1.0',
+		'title' => 'Volunteer Page',
+		'category' => 'widgets',
+		'icon' => 'groups',
+		'description' => 'Harbor Light volunteer page with opportunities and signup CTA.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'heroEyebrow' => array(
+				'type' => 'string',
+				'default' => 'Get Involved'
+			),
+			'heroTitle' => array(
+				'type' => 'string',
+				'default' => 'Make a difference'
+			),
+			'heroTitleHighlight' => array(
+				'type' => 'string',
+				'default' => 'in your community'
+			),
+			'heroDescription' => array(
+				'type' => 'string',
+				'default' => 'Our volunteers are the heart of Harbor Light. Whether you have an hour a week or a day a month, your time and talents can transform lives.'
+			),
+			'opportunitiesTitle' => array(
+				'type' => 'string',
+				'default' => 'Volunteer Opportunities'
+			),
+			'opportunities' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Tutoring & Education',
+						'commitment' => '2-4 hrs/week',
+						'description' => 'Help adults earn their GED or improve literacy skills. No teaching experience required — just patience and encouragement.',
+						'icon' => 'education'
+					),
+					array(
+						'title' => 'Mentorship Program',
+						'commitment' => '2 hrs/week',
+						'description' => 'Walk alongside someone rebuilding their life. Provide guidance, accountability, and a listening ear during their transition.',
+						'icon' => 'mentor'
+					),
+					array(
+						'title' => 'Career Coaching',
+						'commitment' => '3-4 hrs/month',
+						'description' => 'Help with resume writing, interview prep, and job search strategies. Your professional experience is someone\'s breakthrough.',
+						'icon' => 'career'
+					),
+					array(
+						'title' => 'Event Support',
+						'commitment' => 'Flexible',
+						'description' => 'Help organize fundraisers, community dinners, and awareness campaigns. Great for groups and one-time volunteers.',
+						'icon' => 'event'
+					),
+					array(
+						'title' => 'Meal Service',
+						'commitment' => '3 hrs/shift',
+						'description' => 'Prepare and serve meals at our community kitchen. Morning and evening shifts available seven days a week.',
+						'icon' => 'meal'
+					),
+					array(
+						'title' => 'Administrative Help',
+						'commitment' => 'Flexible',
+						'description' => 'Support our operations with data entry, phone calls, or organizing donations. Every task keeps Harbor Light running.',
+						'icon' => 'admin'
+					)
+				)
+			),
+			'whyTitle' => array(
+				'type' => 'string',
+				'default' => 'Why volunteer with us'
+			),
+			'whyItems' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'stat' => '340+',
+						'label' => 'Active volunteers in our community'
+					),
+					array(
+						'stat' => '92%',
+						'label' => 'Of volunteers return the following year'
+					),
+					array(
+						'stat' => '12K+',
+						'label' => 'Hours donated in 2025'
+					)
+				)
+			),
+			'ctaTitle' => array(
+				'type' => 'string',
+				'default' => 'Ready to get started?'
+			),
+			'ctaDescription' => array(
+				'type' => 'string',
+				'default' => 'Fill out a short interest form and our volunteer coordinator will match you with the right opportunity within 48 hours.'
+			),
+			'ctaButtonText' => array(
+				'type' => 'string',
+				'default' => 'Sign Up to Volunteer'
+			),
+			'ctaButtonUrl' => array(
+				'type' => 'string',
+				'default' => 'mailto:volunteer@harborlightfoundation.com'
+			)
+		),
+		'textdomain' => 'volunteer-page',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	)
 );
