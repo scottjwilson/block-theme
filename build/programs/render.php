@@ -40,7 +40,7 @@ $arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path
                     <article class="program-card program-card-featured">
                         <div class="program-card-image">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/programs.webp'); ?>" alt="Adult education classroom at <?php echo esc_attr($program['title']); ?>" loading="lazy">
-                            <span class="program-number"><?php echo esc_html($program['number']); ?></span>
+                            <span class="program-number" aria-hidden="true"><?php echo esc_html($program['number']); ?></span>
                         </div>
                         <div class="program-card-content">
                             <h3 class="program-title"><?php echo esc_html($program['title']); ?></h3>
@@ -61,7 +61,7 @@ $arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path
                     </article>
                 <?php else : ?>
                     <article class="program-card">
-                        <span class="program-number"><?php echo esc_html($program['number']); ?></span>
+                        <span class="program-number" aria-hidden="true"><?php echo esc_html($program['number']); ?></span>
                         <div class="program-card-icon">
                             <?php echo $icon_svg; ?>
                         </div>

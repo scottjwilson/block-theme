@@ -23,7 +23,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--wp--preset--color--amber-dark, #b8872e);
+  color: var(--wp--preset--color--amber-dark, #916b20);
   margin-bottom: var(--wp--preset--spacing--xs, 0.5rem);
 }
 
@@ -36,7 +36,7 @@
 
   em {
     font-style: italic;
-    color: var(--wp--preset--color--amber-dark, #b8872e);
+    color: var(--wp--preset--color--amber-dark, #916b20);
   }
 }
 
@@ -99,7 +99,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--wp--preset--color--amber-dark, #b8872e);
+  color: var(--wp--preset--color--amber-dark, #916b20);
   margin-bottom: var(--wp--preset--spacing--sm, 0.75rem);
 }
 
@@ -131,7 +131,7 @@
   transition: color 300ms;
 
   &:hover {
-    color: var(--wp--preset--color--amber-dark, #b8872e);
+    color: var(--wp--preset--color--amber-dark, #916b20);
   }
 }
 

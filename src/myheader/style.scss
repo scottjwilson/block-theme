@@ -31,7 +31,7 @@
   transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
-    color: #b8872e;
+    color: #916b20;
   }
 }
 
@@ -127,7 +127,7 @@
   color: #0f1a2e;
 
   &:hover {
-    background: #b8872e;
+    background: #916b20;
     transform: translateY(-2px);
     box-shadow:
       0 4px 12px rgba(26, 39, 68, 0.08),
@@ -224,7 +224,7 @@
     transition: color 300ms;
 
     &:hover {
-      color: #b8872e;
+      color: #916b20;
     }
   }
 }

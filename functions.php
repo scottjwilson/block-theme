@@ -38,17 +38,21 @@ function harborlight_resource_hints() {
 add_action( 'wp_head', 'harborlight_resource_hints', 1 );
 
 /**
- * Enqueue Google Fonts for Harbor Light theme
+ * Load Google Fonts non-render-blocking on frontend, normal in editor
  */
 function harborlight_enqueue_fonts() {
-	wp_enqueue_style(
-		'harborlight-google-fonts',
-		'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap',
-		array(),
-		null
-	);
+	$fonts_url = 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap';
+
+	if ( is_admin() ) {
+		wp_enqueue_style( 'harborlight-google-fonts', $fonts_url, array(), null );
+		return;
+	}
+
+	// Load async: media="print" swapped to "all" on load
+	echo '<link rel="stylesheet" href="' . esc_url( $fonts_url ) . '" media="print" onload="this.media=\'all\'">' . "\n";
+	echo '<noscript><link rel="stylesheet" href="' . esc_url( $fonts_url ) . '"></noscript>' . "\n";
 }
-add_action( 'wp_enqueue_scripts', 'harborlight_enqueue_fonts' );
+add_action( 'wp_head', 'harborlight_enqueue_fonts', 2 );
 add_action( 'enqueue_block_editor_assets', 'harborlight_enqueue_fonts' );
 
 /**
@@ -58,7 +62,7 @@ function harborlight_enqueue_styles() {
 	wp_enqueue_style(
 		'harborlight-global-styles',
 		get_template_directory_uri() . '/assets/css/global.css',
-		array( 'harborlight-google-fonts' ),
+		array(),
 		filemtime( get_template_directory() . '/assets/css/global.css' )
 	);
 }
