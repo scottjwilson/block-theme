@@ -16,7 +16,7 @@ $stories = $attributes['stories'] ?? [];
 $cta_text = $attributes['ctaText'] ?? 'View All Stories';
 $cta_url = $attributes['ctaUrl'] ?? '#';
 ?>
-<section <?php echo get_block_wrapper_attributes(['class' => 'stories-section']); ?>>
+<section <?php echo get_block_wrapper_attributes(['class' => 'stories-section', 'id' => 'stories']); ?>>
     <div class="container">
         <header class="section-header section-header-centered">
             <p class="section-eyebrow"><?php echo esc_html($eyebrow); ?></p>

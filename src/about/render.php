@@ -13,7 +13,7 @@ $team_link_text = $attributes['teamLinkText'] ?? 'Meet our full team →';
 $team_link_url = $attributes['teamLinkUrl'] ?? '#';
 $image_alt = $attributes['imageAlt'] ?? 'Photo: Elena Vasquez with founding volunteers, 2016';
 ?>
-<section <?php echo get_block_wrapper_attributes(['class' => 'about-section']); ?>>
+<section <?php echo get_block_wrapper_attributes(['class' => 'about-section', 'id' => 'about']); ?>>
     <div class="container">
         <div class="about-layout">
             <div class="about-image">

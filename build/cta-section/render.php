@@ -14,7 +14,7 @@ $icons = [
     'email' => '<svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 18L24 28L42 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
 ];
 ?>
-<section <?php echo get_block_wrapper_attributes(['class' => 'cta-section']); ?>>
+<section <?php echo get_block_wrapper_attributes(['class' => 'cta-section', 'id' => 'contact']); ?>>
     <div class="cta-background">
         <div class="cta-pattern"></div>
     </div>

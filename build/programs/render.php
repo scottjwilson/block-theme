@@ -22,7 +22,7 @@ $icons = [
 
 $arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 ?>
-<section <?php echo get_block_wrapper_attributes(['class' => 'programs-section']); ?>>
+<section <?php echo get_block_wrapper_attributes(['class' => 'programs-section', 'id' => 'programs']); ?>>
     <div class="container">
         <header class="section-header">
             <p class="section-eyebrow"><?php echo esc_html($eyebrow); ?></p>
