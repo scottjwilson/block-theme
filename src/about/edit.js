@@ -1,6 +1,15 @@
 import { __ } from "@wordpress/i18n";
-import { useBlockProps, RichText, InspectorControls } from "@wordpress/block-editor";
-import { PanelBody, TextControl, TextareaControl, Button } from "@wordpress/components";
+import {
+  useBlockProps,
+  RichText,
+  InspectorControls,
+} from "@wordpress/block-editor";
+import {
+  PanelBody,
+  TextControl,
+  TextareaControl,
+  Button,
+} from "@wordpress/components";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -38,7 +47,7 @@ export default function Edit({ attributes, setAttributes }) {
 
   const addTeamMember = () => {
     setAttributes({
-      teamMembers: [...teamMembers, { name: "New Member", role: "Role" }]
+      teamMembers: [...teamMembers, { name: "New Member", role: "Role" }],
     });
   };
 
@@ -67,16 +76,23 @@ export default function Edit({ attributes, setAttributes }) {
           />
         </PanelBody>
 
-        <PanelBody title={__("Content Paragraphs", "about")} initialOpen={false}>
+        <PanelBody
+          title={__("Content Paragraphs", "about")}
+          initialOpen={false}
+        >
           {paragraphs.map((para, index) => (
-            <div key={index} style={{ marginBottom: '1rem' }}>
+            <div key={index} style={{ marginBottom: "1rem" }}>
               <TextareaControl
                 label={`Paragraph ${index + 1}`}
                 value={para}
                 onChange={(value) => updateParagraph(index, value)}
               />
               {paragraphs.length > 1 && (
-                <Button isDestructive isSmall onClick={() => removeParagraph(index)}>
+                <Button
+                  isDestructive
+                  isSmall
+                  onClick={() => removeParagraph(index)}
+                >
                   {__("Remove", "about")}
                 </Button>
               )}
@@ -94,7 +110,14 @@ export default function Edit({ attributes, setAttributes }) {
             onChange={(value) => setAttributes({ teamTitle: value })}
           />
           {teamMembers.map((member, index) => (
-            <div key={index} style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid #ddd' }}>
+            <div
+              key={index}
+              style={{
+                marginBottom: "1rem",
+                paddingBottom: "1rem",
+                borderBottom: "1px solid #ddd",
+              }}
+            >
               <TextControl
                 label={__("Name", "about")}
                 value={member.name}
@@ -106,7 +129,11 @@ export default function Edit({ attributes, setAttributes }) {
                 onChange={(value) => updateTeamMember(index, "role", value)}
               />
               {teamMembers.length > 1 && (
-                <Button isDestructive isSmall onClick={() => removeTeamMember(index)}>
+                <Button
+                  isDestructive
+                  isSmall
+                  onClick={() => removeTeamMember(index)}
+                >
                   {__("Remove", "about")}
                 </Button>
               )}
@@ -184,7 +211,7 @@ export default function Edit({ attributes, setAttributes }) {
               </div>
 
               <div className="about-team-preview">
-                <h4>{teamTitle}</h4>
+                <h3>{teamTitle}</h3>
                 <ul className="team-list">
                   {teamMembers.map((member, index) => (
                     <li key={index}>

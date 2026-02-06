@@ -4,9 +4,9 @@
  */
 
 $story_images = [
-    'Marcus'  => 'story-marcus.jpg',
-    'Rivera'  => 'story-rivera.jpg',
-    'Chen'    => 'story-chen.jpg',
+    'Marcus'  => 'story-marcus.webp',
+    'Rivera'  => 'story-rivera.webp',
+    'Chen'    => 'story-chen.webp',
 ];
 
 $eyebrow = $attributes['eyebrow'] ?? 'Stories of Change';

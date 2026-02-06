@@ -52,8 +52,8 @@ $external_arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="no
 
             <div class="impact-visual">
                 <div class="impact-image-stack">
-                    <img class="impact-image-1" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/impact-1.jpg'); ?>" alt="<?php echo esc_attr($image1_alt); ?>" loading="lazy">
-                    <img class="impact-image-2" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/impact-2.jpg'); ?>" alt="<?php echo esc_attr($image2_alt); ?>" loading="lazy">
+                    <img class="impact-image-1" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/impact-1.webp'); ?>" alt="<?php echo esc_attr($image1_alt); ?>" loading="lazy">
+                    <img class="impact-image-2" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/impact-2.webp'); ?>" alt="<?php echo esc_attr($image2_alt); ?>" loading="lazy">
                 </div>
             </div>
         </div>

@@ -28,6 +28,16 @@ function myblocks_myheader_block_init() {
 add_action( 'init', 'myblocks_myheader_block_init' );
 
 /**
+ * Add preconnect for Google Fonts and preload hero image (LCP element)
+ */
+function harborlight_resource_hints() {
+	echo '<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>' . "\n";
+	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+	echo '<link rel="preload" as="image" href="' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . '">' . "\n";
+}
+add_action( 'wp_head', 'harborlight_resource_hints', 1 );
+
+/**
  * Enqueue Google Fonts for Harbor Light theme
  */
 function harborlight_enqueue_fonts() {
@@ -53,3 +63,13 @@ function harborlight_enqueue_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'harborlight_enqueue_styles' );
+
+/**
+ * Add meta description for SEO
+ */
+function harborlight_meta_description() {
+	if ( is_front_page() ) {
+		echo '<meta name="description" content="Harbor Light Foundation provides shelter, job training, mental health support, and community programs to illuminate the path forward for those in need.">' . "\n";
+	}
+}
+add_action( 'wp_head', 'harborlight_meta_description', 1 );

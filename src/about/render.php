@@ -17,7 +17,7 @@ $image_alt = $attributes['imageAlt'] ?? 'Photo: Elena Vasquez with founding volu
     <div class="container">
         <div class="about-layout">
             <div class="about-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/about.jpg'); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/about.webp'); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy">
             </div>
 
             <div class="about-content">
@@ -33,7 +33,7 @@ $image_alt = $attributes['imageAlt'] ?? 'Photo: Elena Vasquez with founding volu
                 </div>
 
                 <div class="about-team-preview">
-                    <h4><?php echo esc_html($team_title); ?></h4>
+                    <h3><?php echo esc_html($team_title); ?></h3>
                     <ul class="team-list">
                         <?php foreach ($team_members as $member) : ?>
                             <li>
