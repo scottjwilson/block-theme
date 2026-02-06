@@ -8,17 +8,18 @@
  */
 
 $logo_text = $attributes['logoText'] ?? 'Harbor Light';
+$home = home_url( '/' );
 $nav_links = $attributes['navLinks'] ?? [
-    ['label' => 'About', 'url' => '#about'],
-    ['label' => 'Programs', 'url' => '#programs'],
-    ['label' => 'Impact', 'url' => '#impact'],
-    ['label' => 'Stories', 'url' => '#stories'],
-    ['label' => 'Contact', 'url' => '#contact'],
+    ['label' => 'About', 'url' => $home . '#about'],
+    ['label' => 'Programs', 'url' => $home . '#programs'],
+    ['label' => 'Impact', 'url' => $home . '#impact'],
+    ['label' => 'Stories', 'url' => $home . '#stories'],
+    ['label' => 'Contact', 'url' => $home . '#contact'],
 ];
 $volunteer_text = $attributes['volunteerText'] ?? 'Volunteer';
-$volunteer_url = $attributes['volunteerUrl'] ?? '/volunteer/';
+$volunteer_url = $attributes['volunteerUrl'] ?? $home . 'volunteer/';
 $donate_text = $attributes['donateText'] ?? 'Donate';
-$donate_url = $attributes['donateUrl'] ?? '#contact';
+$donate_url = $attributes['donateUrl'] ?? $home . '#contact';
 ?>
 
 <header class="site-header">
