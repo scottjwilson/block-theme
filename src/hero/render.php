@@ -16,7 +16,7 @@ $primary_button_url = $attributes['primaryButtonUrl'] ?? '#programs';
 $secondary_button_text = $attributes['secondaryButtonText'] ?? 'See Our Impact';
 $secondary_button_url = $attributes['secondaryButtonUrl'] ?? '#impact';
 $stat_number = $attributes['statNumber'] ?? '3,247';
-$stat_label = $attributes['statLabel'] ?? 'Lives changed in 2025';
+$stat_label = $attributes['statLabel'] ?? 'Lives changed in 2026';
 ?>
 <section <?php echo get_block_wrapper_attributes(['class' => 'hero']); ?>>
     <div class="hero-background">
