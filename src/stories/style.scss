@@ -44,7 +44,6 @@
 .stories-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: var(--wp--preset--spacing--lg, 1.5rem);
 }
 
@@ -70,10 +69,13 @@
 }
 
 .story-card-featured .story-image {
-  overflow: hidden;
+  position: relative;
+  min-height: 100%;
 }
 
 .story-card-featured .story-image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -81,7 +83,7 @@
 
 .story-image img {
   width: 100%;
-  min-height: 160px;
+  height: 200px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
