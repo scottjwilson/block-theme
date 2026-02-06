@@ -19,11 +19,11 @@
     "navLinks": {
       "type": "array",
       "default": [
-        { "label": "About", "url": "#about" },
-        { "label": "Programs", "url": "#programs" },
-        { "label": "Impact", "url": "#impact" },
-        { "label": "Stories", "url": "#stories" },
-        { "label": "Contact", "url": "#contact" }
+        { "label": "About", "url": "/#about" },
+        { "label": "Programs", "url": "/#programs" },
+        { "label": "Impact", "url": "/#impact" },
+        { "label": "Stories", "url": "/#stories" },
+        { "label": "Contact", "url": "/#contact" }
       ]
     },
     "volunteerText": {
@@ -32,7 +32,7 @@
     },
     "volunteerUrl": {
       "type": "string",
-      "default": "#volunteer"
+      "default": "/volunteer/"
     },
     "donateText": {
       "type": "string",
@@ -40,7 +40,7 @@
     },
     "donateUrl": {
       "type": "string",
-      "default": "#donate"
+      "default": "/#contact"
     }
   },
   "textdomain": "myheader",

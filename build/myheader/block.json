@@ -21,23 +21,23 @@
       "default": [
         {
           "label": "About",
-          "url": "#about"
+          "url": "/#about"
         },
         {
           "label": "Programs",
-          "url": "#programs"
+          "url": "/#programs"
         },
         {
           "label": "Impact",
-          "url": "#impact"
+          "url": "/#impact"
         },
         {
           "label": "Stories",
-          "url": "#stories"
+          "url": "/#stories"
         },
         {
           "label": "Contact",
-          "url": "#contact"
+          "url": "/#contact"
         }
       ]
     },
@@ -47,7 +47,7 @@
     },
     "volunteerUrl": {
       "type": "string",
-      "default": "#volunteer"
+      "default": "/volunteer/"
     },
     "donateText": {
       "type": "string",
@@ -55,7 +55,7 @@
     },
     "donateUrl": {
       "type": "string",
-      "default": "#donate"
+      "default": "/#contact"
     }
   },
   "textdomain": "myheader",

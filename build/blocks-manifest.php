@@ -482,23 +482,23 @@ Seattle, WA 98126'
 				'default' => array(
 					array(
 						'label' => 'About',
-						'url' => '#about'
+						'url' => '/#about'
 					),
 					array(
 						'label' => 'Programs',
-						'url' => '#programs'
+						'url' => '/#programs'
 					),
 					array(
 						'label' => 'Impact',
-						'url' => '#impact'
+						'url' => '/#impact'
 					),
 					array(
 						'label' => 'Stories',
-						'url' => '#stories'
+						'url' => '/#stories'
 					),
 					array(
 						'label' => 'Contact',
-						'url' => '#contact'
+						'url' => '/#contact'
 					)
 				)
 			),
@@ -508,7 +508,7 @@ Seattle, WA 98126'
 			),
 			'volunteerUrl' => array(
 				'type' => 'string',
-				'default' => '#volunteer'
+				'default' => '/volunteer/'
 			),
 			'donateText' => array(
 				'type' => 'string',
@@ -516,7 +516,7 @@ Seattle, WA 98126'
 			),
 			'donateUrl' => array(
 				'type' => 'string',
-				'default' => '#donate'
+				'default' => '/#contact'
 			)
 		),
 		'textdomain' => 'myheader',
