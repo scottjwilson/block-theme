@@ -108,7 +108,7 @@
     },
     "ctaButtonUrl": {
       "type": "string",
-      "default": "/volunteer/signup/"
+      "default": "/volunteer-signup/"
     }
   },
   "textdomain": "volunteer-page",

@@ -55,7 +55,7 @@ $availability = [
                     <!-- FormSubmit config -->
                     <input type="hidden" name="_subject" value="New Volunteer Signup">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="<?php echo esc_url(home_url('/volunteer/signup/?thanks=1')); ?>">
+                    <input type="hidden" name="_next" value="<?php echo esc_url(home_url('/volunteer-signup/?thanks=1')); ?>">
                     <input type="text" name="_honey" style="display:none">
 
                     <h2 class="signup-form-title">Your Information</h2>

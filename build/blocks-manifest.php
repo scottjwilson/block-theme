@@ -905,7 +905,7 @@ Seattle, WA 98126'
 			),
 			'ctaButtonUrl' => array(
 				'type' => 'string',
-				'default' => '/volunteer/signup/'
+				'default' => '/volunteer-signup/'
 			)
 		),
 		'textdomain' => 'volunteer-page',

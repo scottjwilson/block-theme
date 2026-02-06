@@ -14,7 +14,7 @@ $why_items = $attributes['whyItems'] ?? [];
 $cta_title = $attributes['ctaTitle'] ?? 'Ready to get started?';
 $cta_description = $attributes['ctaDescription'] ?? '';
 $cta_button_text = $attributes['ctaButtonText'] ?? 'Sign Up to Volunteer';
-$cta_button_url = $attributes['ctaButtonUrl'] ?? '/volunteer/signup/';
+$cta_button_url = $attributes['ctaButtonUrl'] ?? '/volunteer-signup/';
 
 $icons = [
     'education' => '<svg viewBox="0 0 48 48" fill="none"><path d="M24 4L4 16L24 28L44 16L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V34C12 34 18 40 24 40C30 40 36 34 36 34V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 16V32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
