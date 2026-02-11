@@ -51,10 +51,12 @@ function harborlight_enqueue_fonts() {
 		return;
 	}
 
-	// Inline the @font-face CSS to avoid an extra network request
+	// Inline the @font-face CSS — rewrite relative paths to absolute URLs
 	$fonts_css = get_template_directory() . '/assets/css/fonts.css';
 	if ( file_exists( $fonts_css ) ) {
-		echo '<style>' . file_get_contents( $fonts_css ) . '</style>' . "\n";
+		$css = file_get_contents( $fonts_css );
+		$css = str_replace( '../fonts/', get_template_directory_uri() . '/assets/fonts/', $css );
+		echo '<style>' . $css . '</style>' . "\n";
 	}
 }
 add_action( 'wp_head', 'harborlight_enqueue_fonts', 1 );
