@@ -20,7 +20,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--wp--preset--color--stone, #9a918a);
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
   margin-bottom: var(--wp--preset--spacing--lg, 1.5rem);
 }
 
@@ -33,14 +33,17 @@
 }
 
 .partner-logo {
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
   font-weight: 600;
-  color: var(--wp--preset--color--stone, #9a918a);
-  opacity: 0.6;
-  transition: opacity 300ms;
+  color: var(--wp--preset--color--charcoal-light, #5c5753);
+  transition: color 300ms;
 
   &:hover {
-    opacity: 1;
+    color: var(--wp--preset--color--navy, #1a2744);
   }
 }
