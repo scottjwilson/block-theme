@@ -28,40 +28,36 @@ function myblocks_myheader_block_init() {
 add_action( 'init', 'myblocks_myheader_block_init' );
 
 /**
- * Add preconnect for Google Fonts and preload hero image (LCP element)
- */
-function harborlight_resource_hints() {
-	echo '<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>' . "\n";
-	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
-}
-add_action( 'wp_head', 'harborlight_resource_hints', 0 );
-
-/**
- * Preload hero image for above-the-fold content
+ * Preload critical font (LCP element is logo text using DM Serif Display)
+ * and hero image for above-the-fold content
  */
 function harborlight_preload_assets() {
+	// Preload the LCP-critical font — eliminates 2-hop third-party chain
+	echo '<link rel="preload" as="font" type="font/woff2" href="' . esc_url( get_template_directory_uri() . '/assets/fonts/dm-serif-display-latin.woff2' ) . '" crossorigin>' . "\n";
+
 	if ( is_front_page() ) {
 		echo '<link rel="preload" as="image" imagesrcset="' . esc_url( get_template_directory_uri() . '/assets/images/hero-600w.webp' ) . ' 600w, ' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . ' 1200w" imagesizes="(max-width: 1024px) 100vw, 50vw" href="' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . '">' . "\n";
 	}
 }
-add_action( 'wp_head', 'harborlight_preload_assets', 1 );
+add_action( 'wp_head', 'harborlight_preload_assets', 0 );
 
 /**
- * Load Google Fonts non-render-blocking on frontend, normal in editor
+ * Load self-hosted fonts: inline @font-face CSS on frontend, Google Fonts in editor
  */
 function harborlight_enqueue_fonts() {
-	$fonts_url = 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap';
-
 	if ( is_admin() ) {
+		$fonts_url = 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap';
 		wp_enqueue_style( 'harborlight-google-fonts', $fonts_url, array(), null );
 		return;
 	}
 
-	// Load async: media="print" swapped to "all" on load
-	echo '<link rel="stylesheet" href="' . esc_url( $fonts_url ) . '" media="print" onload="this.media=\'all\'">' . "\n";
-	echo '<noscript><link rel="stylesheet" href="' . esc_url( $fonts_url ) . '"></noscript>' . "\n";
+	// Inline the @font-face CSS to avoid an extra network request
+	$fonts_css = get_template_directory() . '/assets/css/fonts.css';
+	if ( file_exists( $fonts_css ) ) {
+		echo '<style>' . file_get_contents( $fonts_css ) . '</style>' . "\n";
+	}
 }
-add_action( 'wp_head', 'harborlight_enqueue_fonts', 2 );
+add_action( 'wp_head', 'harborlight_enqueue_fonts', 1 );
 add_action( 'enqueue_block_editor_assets', 'harborlight_enqueue_fonts' );
 
 /**
@@ -84,6 +80,18 @@ function harborlight_inline_styles() {
 	}
 }
 add_action( 'wp_head', 'harborlight_inline_styles', 3 );
+
+/**
+ * Disable wp-emoji scripts and styles (saves ~5KB JS)
+ */
+function harborlight_disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+}
+add_action( 'init', 'harborlight_disable_emojis' );
 
 /**
  * Add meta description for SEO
