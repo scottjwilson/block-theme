@@ -85,15 +85,17 @@
     var(--wp--preset--color--sea, #3d5a80)
   );
   border-radius: 999px;
+  transform-origin: left;
   animation: fillBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform;
 }
 
 @keyframes fillBar {
   from {
-    width: 0;
+    transform: scaleX(0);
   }
   to {
-    width: var(--width);
+    transform: scaleX(1);
   }
 }
 

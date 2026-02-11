@@ -33,9 +33,18 @@ add_action( 'init', 'myblocks_myheader_block_init' );
 function harborlight_resource_hints() {
 	echo '<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>' . "\n";
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
-	echo '<link rel="preload" as="image" href="' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . '">' . "\n";
 }
-add_action( 'wp_head', 'harborlight_resource_hints', 1 );
+add_action( 'wp_head', 'harborlight_resource_hints', 0 );
+
+/**
+ * Preload hero image for above-the-fold content
+ */
+function harborlight_preload_assets() {
+	if ( is_front_page() ) {
+		echo '<link rel="preload" as="image" imagesrcset="' . esc_url( get_template_directory_uri() . '/assets/images/hero-600w.webp' ) . ' 600w, ' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . ' 1200w" imagesizes="(max-width: 1024px) 100vw, 50vw" href="' . esc_url( get_template_directory_uri() . '/assets/images/hero.webp' ) . '">' . "\n";
+	}
+}
+add_action( 'wp_head', 'harborlight_preload_assets', 1 );
 
 /**
  * Load Google Fonts non-render-blocking on frontend, normal in editor
@@ -56,17 +65,25 @@ add_action( 'wp_head', 'harborlight_enqueue_fonts', 2 );
 add_action( 'enqueue_block_editor_assets', 'harborlight_enqueue_fonts' );
 
 /**
- * Enqueue global theme styles
+ * Inline global theme styles to eliminate render-blocking CSS
  */
-function harborlight_enqueue_styles() {
-	wp_enqueue_style(
-		'harborlight-global-styles',
-		get_template_directory_uri() . '/assets/css/global.css',
-		array(),
-		filemtime( get_template_directory() . '/assets/css/global.css' )
-	);
+function harborlight_inline_styles() {
+	if ( is_admin() ) {
+		wp_enqueue_style(
+			'harborlight-global-styles',
+			get_template_directory_uri() . '/assets/css/global.css',
+			array(),
+			filemtime( get_template_directory() . '/assets/css/global.css' )
+		);
+		return;
+	}
+
+	$css_file = get_template_directory() . '/assets/css/global.css';
+	if ( file_exists( $css_file ) ) {
+		echo '<style>' . file_get_contents( $css_file ) . '</style>' . "\n";
+	}
 }
-add_action( 'wp_enqueue_scripts', 'harborlight_enqueue_styles' );
+add_action( 'wp_head', 'harborlight_inline_styles', 3 );
 
 /**
  * Add meta description for SEO

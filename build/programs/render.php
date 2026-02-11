@@ -39,7 +39,7 @@ $arrow_icon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path
                 <?php if ($is_featured) : ?>
                     <article class="program-card program-card-featured">
                         <div class="program-card-image">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/programs.webp'); ?>" alt="Adult education classroom at <?php echo esc_attr($program['title']); ?>" loading="lazy">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/programs.webp'); ?>" srcset="<?php echo esc_url(get_template_directory_uri() . '/assets/images/programs-400w.webp'); ?> 400w, <?php echo esc_url(get_template_directory_uri() . '/assets/images/programs.webp'); ?> 800w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px" alt="Adult education classroom at <?php echo esc_attr($program['title']); ?>" width="800" height="534" loading="lazy">
                             <span class="program-number" aria-hidden="true"><?php echo esc_html($program['number']); ?></span>
                         </div>
                         <div class="program-card-content">
