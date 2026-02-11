@@ -73,3 +73,4 @@ $donate_url = $attributes['donateUrl'] ?? '/#contact';
         </div>
     </div>
 </header>
+<main id="main-content">

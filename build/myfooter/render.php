@@ -44,6 +44,7 @@ $instagram_url = $attributes['instagramUrl'] ?? '#';
 $linkedin_url = $attributes['linkedinUrl'] ?? '#';
 $twitter_url = $attributes['twitterUrl'] ?? '#';
 ?>
+</main>
 <footer id="contact" class="site-footer">
     <div class="container">
         <div class="footer-main">
