@@ -179,12 +179,14 @@
   white-space: nowrap;
 }
 
+a.btn-primary,
 .btn-primary {
   background: #d4a24c;
   color: #0f1a2e;
 
   &:hover {
     background: #916b20;
+    color: #0f1a2e;
   }
 }
 

@@ -122,12 +122,14 @@
   white-space: nowrap;
 }
 
+a.btn-primary,
 .btn-primary {
   background: #d4a24c;
   color: #0f1a2e;
 
   &:hover {
     background: #916b20;
+    color: #0f1a2e;
     transform: translateY(-2px);
     box-shadow:
       0 4px 12px rgba(26, 39, 68, 0.08),
